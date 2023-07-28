@@ -1,13 +1,13 @@
 # Codo File - Code Edior with extending features.
   
   ## Installation 
-    > Open Command Prompt\ Terminal
+    1. Open Command Prompt\ Terminal
 
-    > git clone https://github.com/faizan619/Codo-File.git
+    2. git clone https://github.com/faizan619/Codo-File.git
 
-    > cd .\Codo-File\
+    3. cd .\Codo-File\
 
-    > npm install
+    4. npm install
 
 ## About this Project
 
