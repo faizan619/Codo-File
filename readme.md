@@ -3,11 +3,11 @@
   ## Installation 
     > Open Command Prompt\ Terminal
 
-    -> git clone https://github.com/faizan619/Codo-File.git
+    > git clone https://github.com/faizan619/Codo-File.git
 
-    -> cd .\Codo-File\
+    > cd .\Codo-File\
 
-    -> npm install
+    > npm install
 
 ## About this Project
 
