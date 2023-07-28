@@ -7,6 +7,7 @@ Design:
 - https://icons8.com/
 - https://www.blobmaker.app/
 - https://www.programiz.com/javascript/online-compiler/
+- chrome-extension://hmdcmlfkchdmnmnmheododdhjedfccka/popup.html#
 
 Frontend:
 
