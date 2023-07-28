@@ -1,0 +1,7 @@
+8-15 - priliminary investigation + requirement analisys
+15-22 - requirement analysis + system analysis
+22-29 - design complete
+29-5 - start coding
+5-12
+12-19
+19-26
