@@ -5,6 +5,7 @@
     --main-color:#FAAE17;
     --background-color:#1C1E29;
     --second-background-color:#263238cc;
+    --primiary-color :#f2f2f2;
 }
 html{
     font-size: 16px;
@@ -15,12 +16,12 @@ html{
     z-index: 1;
 }
 .blob_svg{
-    top: -20%;
-    left: -10%;
-}
-.blob_svg2{
     bottom: 0%;
     height: 20rem;
+}
+.blob_svg2{
+    height: 20rem;
+    top: -25%;
     right: 0%;
 }
 /*============================================================
@@ -31,51 +32,37 @@ Registration Page Designing...
 .registerMainComponent{
     height: 100vh;
     background-color: var(--background-color);
-    color: #f2f2f2;
+    color: var(--primiary-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
-/* Title  */
-
 .title{
     font-size: 3rem;
-    /* color: var(--main-color); */
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     z-index: 10;
+    color: var(--main-color);
 }
-/* Main Register section */
+.registerTitle{
+    color: var(--primiary-color);
+}
 .registerSection{
-    /* border: 1px solid green; */
     display:grid;
     grid-template-columns: 1fr 1fr;
     width: 90%;
 }
-/* Register Left Section - Input Fields */
 .registerForm{
-    /* padding: 5% ; */
     background-color: var(--second-background-color);
     z-index: 10;
-    /* padding-top:4rem ; */
-     /* display: flex; */
-/*    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center; */
-    height: 100%;
     border-radius: 5%;
-    /* width: 100%; */
 }
 form{
-    width: 100%;
     padding: 10%;
     height: 100%;
-    /* border: 1px solid blue; */
     display: grid;
     align-content: center;
-    /* border: 1px solid white; */
-
 }
 .RegisterInputField{
     display: grid;
@@ -83,10 +70,6 @@ form{
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* border: 1px solid red; */
-    /* margin: 2rem 0; */
 }
 input{
     height: 2rem;
@@ -106,8 +89,7 @@ label{
     width: 100%;
     background-color: var(--main-color);
     border: transparent;
-    color: white;
-    /* margin:1rem auto; */
+    color: var(--primiary-color);
     height: 2.5rem;
     border: none;
     border-radius: .5rem;
@@ -120,7 +102,6 @@ label{
     width: 100%;
     height: 2rem;
 }
-/* Register Rigth Section - SVG Images */
 .registerSVG{
     display: flex;
     align-items: center;
@@ -140,4 +121,72 @@ label{
 }
 .registerSVG p span:hover{
     text-decoration: underline;
+}
+/*============================================================
+
+Voice 2 Text Playground Page Designing...
+
+============================================================*/
+.voiceContainer{
+    height: 100vh;
+    background-color: var(--background-color);
+}
+.voiceHeader{
+    background-color: var(--second-background-color);
+    height: 10%;
+    border: 1px solid white;
+}
+.voiceBody{
+    height: 90%;
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+}
+.leftLang{
+    background-color: var(--second-background-color);
+}
+.voicePlayground{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+.voiceTextContainer{
+    background-color: var(--primiary-color);
+    border-radius: 1rem;
+    min-width: 50%;
+    max-width: 80%;
+    overflow: hidden;
+    height: 25rem;
+    display: grid;
+    grid-template-rows: 1fr 5rem;
+}
+.voice2TextOutput{
+    height: 20rem;
+    padding: 1rem;
+    overflow-y: auto;
+    border: none;
+    width: 100%;
+    background-color: var(--primiary-color);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar{
+    width: 1rem;
+    background-color: #f2f2f2;
+}
+.btngroup button{
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    color: var(--background-color);
+    border-radius: .7rem;
+}
+.btngroup{
+    padding: .3rem;
+    display: flex;
+    gap: .7rem;
+    justify-content: space-evenly;
+    align-items: center;
 }
