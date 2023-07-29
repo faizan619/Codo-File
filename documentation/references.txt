@@ -10,6 +10,8 @@ Design:
 - chrome-extension://hmdcmlfkchdmnmnmheododdhjedfccka/popup.html#
 
 Frontend:
+- https://blobanimation.com/
+- https://reactrouter.com/en/main
 
 Backend:
 - https://github.com/bradtraversy/nodeauthapp/issues/7
