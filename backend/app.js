@@ -1,8 +1,14 @@
-const express = require('express')
-const app = new express()
-const PORT = process.env.PORT || 5000;
+const dotenv = require('dotenv');
+dotenv.config({path:'./config.env'});
+const mongoose = require('mongoose');
+const express = require('express');
+const app = new express();
+const PORT = process.env.PORT ;
 
 require('./db/conn');
+
+app.use(express.json());
+app.use(require('./router/auth'));
 
 const consoleURL = (req,res,next)=>{
     console.log(`User at URL : localhost:${PORT}${req.url}`);

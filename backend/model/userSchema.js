@@ -17,7 +17,11 @@ const userSchema = new mongoose.Schema({
     cpassword:{
         type:String,
         required:true,
-    }
+    },
+    role:{
+        type:String,
+        default:"not_mentions",
+    },
 })
 
 userSchema.pre('save', async function(next){

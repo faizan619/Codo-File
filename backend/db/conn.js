@@ -1,12 +1,10 @@
 const mongoose = require('mongoose');
+const DB = process.env.DB;
 
-const DB = 'mongodb+srv://faizan_alam:1XblPEyAT4BweZfh@codofile.sdp4hsh.mongodb.net/?retryWrites=true&w=majority'
-mongoose.connect(DB,{
-    useNewUrlParser:true,
-})
+mongoose.connect(DB)
 .then(()=>{
     console.log(`Database Connected Successfully!`);
-})
+}) 
 .catch((err)=>{
     console.log(`faizan an error occured .The Error is :${err}`);
 })
