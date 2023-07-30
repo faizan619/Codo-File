@@ -15,10 +15,12 @@ Frontend:
 - https://stackoverflow.com/questions/70819371/referenceerror-regeneratorruntime-is-not-defined-when-running-testing
 - https://www.npmjs.com/package/react-use-clipboard
 - https://www.npmjs.com/package/react-speech-recognition
+- https://greensock.com/forums/topic/19148-draggable-not-working-with-react-165/
 - https://github.com/naptha/tesseract.js/
 - https://tesseract.projectnaptha.com/
 - https://react.dev/
 - https://create-react-app.dev/
+- https://stackoverflow.com/questions/52558399/how-can-i-limit-a-draggable-element-to-the-body-disable-text-selection-and-enab
 
 
 Backend:
