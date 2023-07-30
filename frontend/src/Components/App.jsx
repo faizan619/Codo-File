@@ -8,6 +8,8 @@ import Python from './Screens/Languages/Python'
 import Html from './Screens/Languages/Html'
 import Java from './Screens/Languages/Java'
 import JavaScript from './Screens/Languages/Javascript'
+import Errorpage from './Screens/Errorpage';
+
 
 
 
@@ -24,6 +26,7 @@ function App() {
       <Route path='/editor/html' element={<Html/>}/>
       <Route path='/editor/css' element={<Html/>}/>
       <Route path='/editor/java' element={<Java/>}/>
+      <Route path='*' element={<Errorpage/>}/>
       </Routes>
     </BrowserRouter>
   )

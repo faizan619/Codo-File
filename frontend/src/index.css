@@ -40,6 +40,35 @@ span{
 }
 /*============================================================
 
+Error Page Designing... 
+
+============================================================*/
+.errorcontainer{
+    background-color: var(--background-color);
+    height: 100vh;
+}
+.box{
+    height: 2rem;
+    display: inline-block;
+    box-shadow: 1px 1px 5px gray;
+    border: 1px solid ;
+    border-color: var(--second-background-color);
+    color: white;
+    padding: .5rem 1rem;
+    align-self: center;
+    justify-self: center;
+}
+.boxes{
+    border: 1px solid blue;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+}
+
+/*============================================================
+
 Registration Page Designing... 
 
 ============================================================*/
