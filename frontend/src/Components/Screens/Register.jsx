@@ -55,8 +55,8 @@ function Register() {
                 </div>
                 <div className="registerSVG">
                     <img src={Login_svg} alt="" />
-                    {/* <p>Already have an Account?  <NavLink to="/login"><span className="registerSwitch">Login Now</span></NavLink></p> */}
-                    <p>Already have an Account?  <NavLink to="/voice2text"><span className="registerSwitch">Login Now</span></NavLink></p>
+                    <p>Already have an Account?  <NavLink to="/login"><span className="registerSwitch">Login Now</span></NavLink></p>
+                    {/* <p>Already have an Account?  <NavLink to="/voice2text"><span className="registerSwitch">Login Now</span></NavLink></p> */}
                 </div>
             </div>
         </div>
