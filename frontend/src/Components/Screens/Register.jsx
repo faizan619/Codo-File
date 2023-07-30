@@ -50,7 +50,7 @@ function Register() {
                                 </select>
                             </div>
                         </div>
-                        <button className="btn registerbtn">Register</button>
+                        <NavLink to="/voice2text"><button className="btn registerbtn">Register</button></NavLink>
                     </form>
                 </div>
                 <div className="registerSVG">
