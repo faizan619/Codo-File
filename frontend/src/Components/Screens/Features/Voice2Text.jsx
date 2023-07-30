@@ -2,6 +2,9 @@ import 'regenerator-runtime/runtime';
 import useClipboard from "react-use-clipboard";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import React, { useState } from 'react';
+import LangList from '../../LangList';
+import Header from '../../Header';
+
 
 function Voice2Text() {
   const [textToCopy,setTextToCopy] = useState();
@@ -16,11 +19,11 @@ function Voice2Text() {
     <>
         <div className="voiceContainer">
             <div className="voiceHeader">
-                i am header
+                <Header/>
             </div>
             <div className="voiceBody">
                 <div className="leftLang">
-                    i am left side
+                    <LangList/>
                 </div>
                 <div className="voicePlayground">
                     <h1 className="title">Voice to Text Converter</h1>

@@ -30,6 +30,14 @@ span{
     text-decoration: none;
     font-size: 1.1rem;
 }
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar{
+    width: .7rem;
+    background-color: #f2f2f2;
+}
 /*============================================================
 
 Registration Page Designing... 
@@ -50,6 +58,7 @@ Registration Page Designing...
     margin-bottom: 2rem;
     z-index: 10;
     color: var(--main-color);
+    text-align: center;
 }
 .registerTitle{
     color: var(--primiary-color);
@@ -168,6 +177,84 @@ Login Page Designing...
     gap: 2rem;
     
 }
+/*============================================================
+
+Header Section Designing...
+
+============================================================*/
+.headerContainer{
+    /* border:1px solid red; */
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.Headerbtn{
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: var(--main-color);
+    color: var(--background-color);
+    border-color: var(--main-color);
+}
+.headerImage{
+    display: flex;
+    justify-content: space-around;
+    color: var(--main-color);
+    align-items: center;
+}
+.headerImage p{
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+.headerlogo{
+    height: 2.3rem;
+}
+
+/*============================================================
+
+Language Side Navbar Section Designing...
+
+============================================================*/
+.LangContainer{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2fr .8fr;
+    border: 1px solid white;
+    border-top: 0;
+}
+.LangSection{
+    border-bottom: 1px solid white;
+    padding: .5rem;
+}
+.languages{
+    height: 100%;
+    display: grid;
+    align-content: space-around;
+    justify-content: space-around;
+}
+.FeatureSection{
+    background-color: var(--background-color);
+    display: grid;
+}
+.languageBorder{
+    border: 1px solid white;
+    display: flex;
+    border-radius: .3rem;
+    justify-content: center;
+    padding-top: .1rem;
+}
+.languageBorder img{
+    border-radius: 100%;
+}
+.imagefeature11 {
+    height: 2rem;
+    border-radius: 0;
+}
+
 
 /*============================================================
 
@@ -215,14 +302,7 @@ Voice 2 Text Playground Page Designing...
     width: 100%;
     background-color: var(--primiary-color);
 }
-::-webkit-scrollbar-thumb{
-    background-color: var(--main-color);
-}
 
-::-webkit-scrollbar{
-    width: 1rem;
-    background-color: #f2f2f2;
-}
 .btngroup button{
     padding: 1rem 2rem;
     background-color: var(--main-color);
