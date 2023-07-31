@@ -1,0 +1,55 @@
+{
+  "username":"user1",
+  "email":"user1@gmail.com",
+  "password":123456,
+  "cpassword":123456,
+  "role":"Web Developer"
+}
+{
+  "username":"user2",
+  "email":"user2@gmail.com",
+  "password":123456,
+  "cpassword":123456,
+  "role":"Web Developer"
+}
+{
+  "username":"user3",
+  "email":"user3@gmail.com",
+  "password":123456,
+  "cpassword":123456,
+  "role":"Web Developer"
+}
+{
+  "username":"user4",
+  "email":"user4@gmail.com",
+  "password":123456,
+  "cpassword":123456,
+  "role":"Web Developer"
+}
+{
+  "username":"user5",
+  "email":"user5@gmail.com",
+  "password":654321,
+  "cpassword":654321,
+  "role":"Web Developer"
+}
+{
+  "username":"user6",
+  "email":"user6@gmail.com",
+  "password":123456,
+  "cpassword":123456,
+  "role":"Web Developer"
+}
+{
+  "username":"final1",
+  "email":"final1@gmail.com",
+  "password":"Fainal1",
+  "cpassword":"Fainal1",
+  "role":"Web Developer"
+}
+{
+  "username":"final2",
+  "email":"final2@gmail.com",
+  "password":"Fainal1",
+  "cpassword":"Fainal1"
+}

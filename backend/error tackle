@@ -1,0 +1,11 @@
+Problem - 1 :
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+ANSWER - always check whether you have set only one res.send .if you have multiple res.send then it will show header error 
+
+Problem -2 :
+## on submit data in login ##
+Admin There is an error : Error: Illegal arguments: number, string
+ANSWER - convert the 
+const isMatch = await bcrypt.compare(password, userLogin.password);
+into String(password), String(userLogin.password)
+change it to string..
