@@ -22,10 +22,15 @@ Frontend:
 - https://create-react-app.dev/
 - https://stackoverflow.com/questions/52558399/how-can-i-limit-a-draggable-element-to-the-body-disable-text-selection-and-enab
 
-
 Backend:
 - https://github.com/bradtraversy/nodeauthapp/issues/7
 - https://stackoverflow.com/questions/34982964/bcrypt-error-illegal-arguments-string-unidentified
+- https://www.datainfinities.com/43/cant-set-headers-after-they-are-sent-to-the-client
+- https://stackoverflow.com/questions/47783413/bcrypt-illegal-argument-number
+- https://bobbyhadz.com/blog/javascript-error-cannot-set-headers-after-they-are-sent-to-client
+- https://www.golinuxcloud.com/cannot-set-headers-after-they-are-sent-to-client/
+- https://www.phind.com/search?cache=44a4a3e7-dde8-47f9-84bb-26be8277b978
+
 
 Database:
 - https://cloud.mongodb.com/v2/64c1040943b2b305a0e61348#/clusters
