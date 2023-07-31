@@ -38,34 +38,6 @@ span{
     width: .7rem;
     background-color: #f2f2f2;
 }
-/*============================================================
-
-Error Page Designing... 
-
-============================================================*/
-.errorcontainer{
-    background-color: var(--background-color);
-    height: 100vh;
-}
-.box{
-    height: 2rem;
-    display: inline-block;
-    box-shadow: 1px 1px 5px gray;
-    border: 1px solid ;
-    border-color: var(--second-background-color);
-    color: white;
-    padding: .5rem 1rem;
-    align-self: center;
-    justify-self: center;
-}
-.boxes{
-    border: 1px solid blue;
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    display: flex;
-
-}
 
 /*============================================================
 
@@ -284,6 +256,66 @@ Language Side Navbar Section Designing...
     border-radius: 0;
 }
 
+/*============================================================
+
+Error Page Designing... 
+
+============================================================*/
+.errorcontainer{
+    height: 100vh;
+    background-color: var(--background-color);
+}
+.errorHeader{
+    background-color: var(--second-background-color);
+    height: 10%;
+    border: 1px solid white;
+}
+.errorBody{
+    height: 90%;
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+}
+.errorPage{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+.errortextcontainer h1{
+    font-size: 7rem;
+    color: var(--second-background-color);
+}
+.eerrrroorr{
+    font-size: .7em;
+}
+.messageEr{
+    text-align: center;
+    font-size: 2.2em;
+}
+.errortextcontainer{
+    background-color: var(--primiary-color);
+    border-radius: 1rem;
+    min-width: 50%;
+    max-width: 80%;
+    overflow: hidden;
+    height: 25rem;
+    display: grid;
+    padding: 1rem 2rem;
+}
+.errorheader1 p{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--main-color);
+}
+.errorheader1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.errortopLogo{
+    width: 3rem;
+}
 
 /*============================================================
 
