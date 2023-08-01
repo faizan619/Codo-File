@@ -65,7 +65,6 @@ router.post('/login', async (req,res)=>{
             res.status(401).json({error:"Invalid username or Password!"});
         }
 
-
         if(userLogin===null){
             console.log(`Please register to login in codofile`)
         }
