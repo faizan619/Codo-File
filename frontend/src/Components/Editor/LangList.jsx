@@ -1,11 +1,11 @@
 import React from 'react';
-import mic from '../assets/mic.png';
-import js from '../assets/js.png';
-import html from '../assets/html.png';
-import css from '../assets/css.png';
-import python from '../assets/python.png';
-import java from '../assets/java.png';
-import image from '../assets/image.png';
+import mic from '../../assets/mic.png';
+import js from '../../assets/js.png'
+import html from '../../assets/html.png';
+import css from '../../assets/css.png';
+import python from '../../assets/python.png';
+import java from '../../assets/java.png';
+import image from '../../assets/image.png';
 import { NavLink } from 'react-router-dom';
 
 

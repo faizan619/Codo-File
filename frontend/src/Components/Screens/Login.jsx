@@ -6,13 +6,13 @@ import blog_svg from '../../assets/blobanimation.svg';
 
 function Login() {
   return (
-    <>
+    <> 
       <img className='blob_svg blob_a' src={blog_svg} alt="backgound-svg" />
       <img className='blob_svg2 blob_a' src={blog_svg} alt="backgound-svg" />
       <div className="loginContainer">
       <div className="registerSVG loginimage">
                     <img src={Login_svg} alt="" />
-                    <p>Don't have an Account? <NavLink to="/"><span className='registerSwitch'>Create Account</span></NavLink></p>
+                    <p>Don't have an Account? <NavLink to="/register"><span className='registerSwitch'>Create Account</span></NavLink></p>
       </div>
         <div className="loginDetails">
           <h1 className='title logintitle'>Login</h1>

@@ -1,3 +1,9 @@
+/*=======================================================
+
+Global Design Here
+
+--> font-family:  sans-serif; 
+========================================================*/
 *{
     margin: 0;
     padding: 0;
@@ -8,35 +14,210 @@
     --primiary-color :#f2f2f2;
 }
 html{
-    font-size: 16px;
+    font-size: 15px;
+    font-family: Verdana;
+}
+.btn{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: var(--main-color);
+    color: var(--background-color);
+    border-radius: 5px;    
+    padding: 7px 14px;
+
+}
+.btn:hover{
+    transition: all ease-in-out .5s;
+    box-shadow: 1px 1px 10px white;
 }
 .blob_a{
     position: absolute;
-    height: 30rem;
+    height: 20rem;
     z-index: 1;
 }
+.blob1{
+    left: -100px;
+    bottom: 0;
+}
+.blob2{
+    right: 0px;
+    top: 50px;
+}
+.title{
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--main-color);
+    z-index: 10;
+    margin-bottom: 2rem;
+}
+mark{
+    background-color: transparent;
+    color: var(--main-color);
+}
+/*
 .blob_svg{
     bottom: 0%;
-    height: 20rem;
 }
 .blob_svg2{
-    height: 20rem;
     top: -25%;
     right: 0%;
 }
-span{
-    color: var(--main-color);
-    line-height: 2rem;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
+*/
 ::-webkit-scrollbar-thumb{
     background-color: var(--main-color);
 }
 
 ::-webkit-scrollbar{
-    width: .7rem;
+    width: .5rem;
     background-color: #f2f2f2;
+}
+.container{
+    background-color: var(--background-color);
+    height: 100vh;
+}
+
+/*============================================================
+
+Header Section Designing...
+
+============================================================*/
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+    padding: 1.3rem 1.5rem;
+    top: 0%;
+    z-index: 100;
+    top: 0%;
+    background-color: var(--second-background-color);
+}
+.headerImage{
+    display: flex;
+    color: var(--main-color);
+    align-items: center;
+}
+.headerImage p{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+.headerlogo{
+    height: 2.7rem;
+}
+.Headerbtngroup{
+    display: flex;
+    gap: 1rem;
+}
+@media (max-width:450px) {
+    .headerImage p{
+        font-size: 1rem;
+    }
+    .headerlogo{
+        height: 2.3rem;
+    }
+    .Headerbtngroup{
+        gap: .5rem;
+    }
+}
+@media (max-width:350px) {
+    .headerImage p{
+        display: none;
+    }
+    .Headerbtn{
+        padding: 2px 4px;
+    }
+}
+
+/*============================================================
+
+Home Page Designing... 
+
+============================================================*/
+.landingContainer{
+    display: grid;
+    place-items: center;
+    z-index: 10;
+}
+.landingInfo p{
+    color: var(--primiary-color);
+    font-size: 1.2rem;
+}
+.landingInfo h1{
+    font-size: 7rem;
+    color: var(--main-color);
+    -webkit-text-stroke: 2px #1C1E29;
+}
+.landingInfo{
+    z-index: 10;
+    text-align:center ;
+}
+@media (max-width:600px) {
+    .landingInfo h1{
+        font-size: 3rem;
+    }
+}
+@media (max-width:500px) {
+    .blob_a{
+        height: 13rem;
+    }
+    .blob1{
+        left: -40px;
+        bottom: 0;
+    }
+    .blob2{
+        right: 0px;
+        top: 50px;
+    }
+}
+@media (max-width:250px) {
+    .landingInfo h1{
+        font-size: 2rem;
+    }
+    .landingInfo p{
+        font-size: 1rem;
+    }
+}
+
+/*============================================================
+
+Home page 2 section Designing... 
+
+============================================================*/
+
+.codingSection{
+    /* border: 1px solid red; */
+    display: flex;
+}
+.codingsec{
+    /* border: 1px solid green; */
+    display: flex;
+    flex: 1;
+}
+.codingInfo{
+    padding: 1rem;
+    padding-left: 4rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.infoCoding{
+    color: var(--primiary-color);
+    font-size: 2.5rem;
+    width: 90%;
+    margin-bottom: 2rem;
+}
+.codingimage{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.CodingImg{
+    height: 70%;
+    display: flex;
+    align-items: center;
 }
 
 /*============================================================
@@ -54,13 +235,13 @@ Registration Page Designing...
     align-items: center;
     overflow: hidden;
 }
-.title{
+/* .title{
     font-size: 3rem;
     margin-bottom: 2rem;
     z-index: 10;
     color: var(--main-color);
     text-align: center;
-}
+} */
 .registerTitle{
     color: var(--primiary-color);
 }
@@ -95,7 +276,7 @@ label{
     font-size: 1.3rem;
     color: var(--main-color);
 }
-.btn:hover{
+/* .btn:hover{
     cursor: pointer;
     transition: all ease-in-out .5s;
     box-shadow: 1px 1px 5px white;
@@ -111,8 +292,7 @@ label{
     border-radius: .5rem;
     color: var(--background-color);
     font-size: 1.2rem;
-
-}
+} */
 .Registerdomain select{
     border: 1px solid;
     width: 100%;
@@ -177,42 +357,6 @@ Login Page Designing...
     max-width: 90%;
     gap: 2rem;
     
-}
-/*============================================================
-
-Header Section Designing...
-
-============================================================*/
-.headerContainer{
-    /* border:1px solid red; */
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-}
-.Headerbtn{
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-left: 10px;
-    background-color: var(--main-color);
-    color: var(--background-color);
-    border-color: var(--main-color);
-}
-.headerImage{
-    display: flex;
-    justify-content: space-around;
-    color: var(--main-color);
-    align-items: center;
-}
-.headerImage p{
-    font-size: 1.3rem;
-    margin-left: 1rem;
-    font-weight: bold;
-}
-.headerlogo{
-    height: 2.3rem;
 }
 
 /*============================================================

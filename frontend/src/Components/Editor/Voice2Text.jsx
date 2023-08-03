@@ -2,8 +2,8 @@ import 'regenerator-runtime/runtime';
 import useClipboard from "react-use-clipboard";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import React, { useState } from 'react';
-import LangList from '../../LangList';
-import Header from '../../Header';
+import LangList from './LangList';
+import Header from '../Header';
 
 
 function Voice2Text() {
