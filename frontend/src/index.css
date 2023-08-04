@@ -49,7 +49,6 @@ html{
     font-size: 3.5rem;
     color: var(--main-color);
     z-index: 10;
-    margin-bottom: 2rem;
 }
 mark{
     background-color: transparent;
@@ -188,11 +187,9 @@ Home page 2 section Designing...
 ============================================================*/
 
 .codingSection{
-    /* border: 1px solid red; */
     display: flex;
 }
 .codingsec{
-    /* border: 1px solid green; */
     display: flex;
     flex: 1;
 }
