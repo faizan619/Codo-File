@@ -16,8 +16,8 @@ function Homepage() {
   return (
     <>
     <div className="container">
-        <Header/> 
-        <LandingPage/>
+        {/* <Header/>  */}
+        <LandingPage/> 
         <CodingPage 
           title="JavaScript Compiler"
           info={<>All The <mark>Logic</mark> That you need to Learn and Practice <mark> JavaScript </mark> will be Accomplished by this <mark> Js Text Editor </mark> .</>} 

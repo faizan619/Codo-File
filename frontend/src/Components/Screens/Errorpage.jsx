@@ -14,7 +14,6 @@ function Errorpage() {
   return (
   <div className="errorcontainer">
   <div className="errorHeader">
-      {/* <Header/> */}
       <div className="errorheader1">
             <img className='errortopLogo' src={headerImg} alt="MainLogo" /><p>Codo File</p>
         </div>

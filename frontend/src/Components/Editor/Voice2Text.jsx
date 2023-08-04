@@ -3,7 +3,7 @@ import useClipboard from "react-use-clipboard";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import React, { useState } from 'react';
 import LangList from './LangList';
-import Header from '../Header';
+// import Header from '../Header';
 
 
 function Voice2Text() {
@@ -18,9 +18,6 @@ function Voice2Text() {
   return (
     <>
         <div className="voiceContainer">
-            <div className="voiceHeader">
-                <Header/>
-            </div>
             <div className="voiceBody">
                 <div className="leftLang">
                     <LangList/>
@@ -29,7 +26,7 @@ function Voice2Text() {
                     <h1 className="title">Voice to Text Converter</h1>
                     <div className="voiceTextContainer">
                         <div className="voice2TextOutput" onClick={()=>setTextToCopy(transcript)}>
-                            <p>{transcript}</p>
+                            <mark><h3>{transcript}</h3></mark>
                         </div>
                         <div className="btngroup">
                             <button onClick={setCopied}>Copied? {isCopied ? "Yes!" : "Nope!"}</button>

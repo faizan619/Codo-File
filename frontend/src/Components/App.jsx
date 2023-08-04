@@ -10,10 +10,12 @@ import Java from './Editor/Java';
 import JavaScript from './Editor/Javascript';
 import Errorpage from './Screens/Errorpage';
 import Homepage from './Screens/Homepage';
+import Header from './Header';
 
 function App() {
   return (
     <BrowserRouter>
+    <Header/>
       <Routes>
       <Route path='/' element={<Homepage/>}/>      
       <Route path='/register' element={<Register/>} />
@@ -23,8 +25,8 @@ function App() {
       <Route path='/editor/html' element={<Html/>}/>
       <Route path='/editor/css' element={<Html/>}/>
       <Route path='/editor/java' element={<Java/>}/>
-      <Route path='/voice2text' element={<Voice2Text/>}/>
-      <Route path='/image2text' element={<Image2Text/>}/>
+      <Route path='/editor/voice2text' element={<Voice2Text/>}/>
+      <Route path='/editor/image2text' element={<Image2Text/>}/>
       <Route path='*' element={<Errorpage/>}/>
       </Routes>
     </BrowserRouter>
