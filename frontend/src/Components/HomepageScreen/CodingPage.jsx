@@ -2,12 +2,12 @@ import React from 'react'
 // import ImageCoding from '../../assets/JavaScript frameworks-rafiki.svg'
 import { NavLink } from 'react-router-dom'
 
-function CodingPage(props) {
+function CodingPage(props) { 
   return (
     <>
         <div className="codingContainer container">
             <h1 className='title'>{props.title}</h1>
-            <div className="codingSection">
+            <div className="codingSection" style={props.poss}>
                 <div className="codingInfo codingsec">
                     <div className="infoCoding infoDetails">
                     {props.info}
