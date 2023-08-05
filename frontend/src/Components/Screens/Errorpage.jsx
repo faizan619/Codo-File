@@ -13,11 +13,6 @@ function Errorpage() {
         }, []);
   return (
   <div className="errorcontainer">
-  <div className="errorHeader">
-      <div className="errorheader1">
-            <img className='errortopLogo' src={headerImg} alt="MainLogo" /><p>Codo File</p>
-        </div>
-  </div>
   <div className="errorBody">
       <div className="leftLang">
           <LangList/>

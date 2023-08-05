@@ -51,7 +51,7 @@ function Homepage() {
         />
         <CodingPage
           title="Image To Code"
-          path='/image2text'
+          path='/editor/image2text'
           image={ImagCod}
           info={<>
             Turn Your <mark>Image into Reality</mark> with this amazing Feature of <mark>Image to Code</mark> Tool. 
@@ -60,7 +60,7 @@ function Homepage() {
         />
         <CodingPage
           title="Voice To Code"
-          path='/voice2text'
+          path='/editor/voice2text'
           image={SpeechCod}
           info={<>
             <mark>"Words Speak more than Actions"</mark> let this quote get Install into your life by our latest tool <mark>Voice to Text</mark> feature .

@@ -17,6 +17,7 @@ https://www.softr.io/tools/svg-wave-generator
 html{
     font-size: 15px;
     font-family: Verdana;
+    /* background-color: var(--background-color); */
 }
 .btn{
     cursor: pointer;
@@ -120,10 +121,12 @@ Header Section Designing...
     color: var(--main-color);
     align-items: center;
 }
-.headerImage p{
+.headerp{
+    text-decoration: none;
     font-size: 1.5rem;
     margin-left: 1rem;
     font-weight: bold;
+    color: var(--main-color);
 }
 .headerlogo{
     height: 2.7rem;
@@ -271,7 +274,7 @@ Feedback-Homepage Page Designing...
 /*============================================================
 
 Footer page section Designing... 
-https://wavier.art/
+
 ============================================================*/
 .wave-container {  
     height: 15vh;
@@ -383,32 +386,6 @@ form{
     gap: 2rem;
     margin-bottom: 2rem;
 }
-/* input{
-    height: 2rem;
-    width: 100%;
-    padding: .3rem;
-} */
-/* label{
-    font-size: 1.3rem;
-    color: var(--main-color);
-} */
-/* .btn:hover{
-    cursor: pointer;
-    transition: all ease-in-out .5s;
-    box-shadow: 1px 1px 5px white;
-    border: 1px solid white;
-}
-.btn{
-    width: 100%;
-    background-color: var(--main-color);
-    border: transparent;
-    color: var(--primiary-color);
-    height: 2.5rem;
-    border: none;
-    border-radius: .5rem;
-    color: var(--background-color);
-    font-size: 1.2rem;
-} */
 .Registerdomain select{
     border: 1px solid;
     width: 100%;
@@ -481,13 +458,8 @@ Error Page Designing...
 
 ============================================================*/
 .errorcontainer{
-    height: 100vh;
+    height: 90vh;
     background-color: var(--background-color);
-}
-.errorHeader{
-    background-color: var(--second-background-color);
-    height: 10%;
-    border: 1px solid white;
 }
 .errorBody{
     height: 90%;
@@ -499,10 +471,11 @@ Error Page Designing...
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
+    color: white;
 }
 .errortextcontainer h1{
     font-size: 7rem;
-    color: var(--second-background-color);
+    color: var(--main-color);
 }
 .eerrrroorr{
     font-size: .7em;
@@ -512,7 +485,8 @@ Error Page Designing...
     font-size: 2.2em;
 }
 .errortextcontainer{
-    background-color: var(--primiary-color);
+    background-color: rgba(255, 255, 255, 0);
+    border: 3px solid white;
     border-radius: 1rem;
     min-width: 50%;
     max-width: 80%;
@@ -520,20 +494,6 @@ Error Page Designing...
     height: 25rem;
     display: grid;
     padding: 1rem 2rem;
-}
-.errorheader1 p{
-    font-size: 2rem;
-    margin-left: 2rem;
-    color: var(--main-color);
-}
-.errorheader1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.errortopLogo{
-    width: 3rem;
 }
 
 /*============================================================
@@ -545,11 +505,6 @@ Voice 2 Text Playground Page Designing...
     height: 90vh;
     background-color: var(--background-color);
 }
-/* .voiceHeader{
-    background-color: var(--second-background-color);
-    height: 10%;
-    border: 1px solid white;
-} */
 .voiceBody{
     height: 90%;
     display: grid;
@@ -598,4 +553,127 @@ Voice 2 Text Playground Page Designing...
     gap: .7rem;
     justify-content: space-evenly;
     align-items: center;
+}
+
+
+/*========================================================
+
+JavaScript Editor page Design
+
+=========================================================*/
+
+.jsContainer{
+    background-color: var(--background-color);
+}
+.jsBody{
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+}
+.runHeaderJS{
+    height: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.jsplayground{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 90%;
+    color: white;
+}
+.clear{
+    padding: .5rem 1rem;
+    background-color: transparent;
+    color: var(--main-color);
+    border-color: var(--main-color);
+    border-radius: .3rem;
+    font-weight: bold;
+}
+.jsfile{
+    background-color: var(--second-background-color);
+    border: 1px solid white;
+}
+.jsrightheaderfile p{
+    font-size: 1.5rem;
+}
+.jsleftheaderfile{
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.jsrightheaderfile{
+    background-color: var(--second-background-color);
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.snippet{
+    border: 0.1px solid white;
+    padding: .5rem;
+}
+.runbtn{
+    display: flex;
+    gap: 1rem;
+}
+.voicebtn{
+    height: 2rem;
+}
+
+/*========================================================
+
+HTML Editor page Design
+
+=========================================================*/
+
+.htmlcodeEditor{
+    height: 90vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--background-color);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.webeditorheading img{
+    height: 2rem;
+}
+.webeditorheading{
+    /* flex: 1; */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font: 600 1.3rem sans-serif;
+    color: var(--main-color);
+    margin: .5rem 0;
+}
+.jsrunbtn{
+    padding: .3rem 1rem;
+    border-radius: .4rem;
+    background-color: var(--main-color);
+    font-weight: bold;
+    margin-left: auto;
+}
+.editormain{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    overflow-x: auto;
+    padding: .3rem;
+}
+.editormain textarea{
+    width: 100%;
+    height: calc(90% - 2rem);
+    border: none;
+    padding: 1rem;
+    font-style: 1.1rem;
+    resize: vertical;
+}
+#result{
+    width: 95%;
+    height: 95%;
+    border: none;
+    background-color: white;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    margin-top: 1.3rem;
 }
