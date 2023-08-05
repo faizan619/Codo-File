@@ -21,6 +21,7 @@ Frontend:
 - https://react.dev/
 - https://create-react-app.dev/
 - https://stackoverflow.com/questions/52558399/how-can-i-limit-a-draggable-element-to-the-body-disable-text-selection-and-enab
+- https://wavier.art/
 
 Backend:
 - https://github.com/bradtraversy/nodeauthapp/issues/7
