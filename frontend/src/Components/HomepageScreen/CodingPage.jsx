@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 function CodingPage(props) { 
   return (
     <>
-        <div className="codingContainer container">
+        <div className="codingContainer container"> 
             <h1 className='title'>{props.title}</h1>
             <div className="codingSection" style={props.poss}>
                 <div className="codingInfo codingsec">

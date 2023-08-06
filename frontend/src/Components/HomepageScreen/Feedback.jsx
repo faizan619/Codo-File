@@ -3,7 +3,7 @@ import blob from '../../assets/blobanimation.svg'
 
 function Feedback() {
   return (
-    <>
+    <> 
         <div className='container'>
         <img src={blob} alt="" className='blob_a blob3' />
     

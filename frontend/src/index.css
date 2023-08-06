@@ -17,7 +17,7 @@ https://www.softr.io/tools/svg-wave-generator
 html{
     font-size: 15px;
     font-family: Verdana;
-    /* background-color: var(--background-color); */
+    background-color: var(--background-color);
 }
 .btn{
     cursor: pointer;
@@ -27,7 +27,6 @@ html{
     color: var(--background-color);
     border-radius: 5px;    
     padding: 10px 15px;
-
 }
 .btn:hover{
     transition: all ease-in-out .5s;
@@ -98,6 +97,9 @@ textarea{
     height: 100vh;
 }
 
+.smallScreen{
+    display: none;
+}
 /*============================================================
 
 Header Section Designing...
@@ -120,6 +122,7 @@ Header Section Designing...
     display: flex;
     color: var(--main-color);
     align-items: center;
+    /* gap: 1rem; */
 }
 .headerp{
     text-decoration: none;
@@ -263,6 +266,10 @@ Feedback-Homepage Page Designing...
     align-items: center;
     justify-content: flex-start;
 }
+.formDetails label{
+    -webkit-text-stroke: 1px #1C1E29;
+    font-weight: bold;
+}
 .formDetails{
     z-index: 10;
     width: 70%;
@@ -354,13 +361,6 @@ Registration Page Designing...
     align-items: center;
     overflow: hidden;
 }
-/* .title{
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    z-index: 10;
-    color: var(--main-color);
-    text-align: center;
-} */
 .registerTitle{
     color: var(--primiary-color);
 }
@@ -679,7 +679,7 @@ HTML Editor page Design
 }
 /*========================================================
     
-HTML Editor page Design
+image to text page Design
     
 =========================================================*/
 
@@ -720,4 +720,201 @@ HTML Editor page Design
     object-fit: contain;
     border-radius: .5rem;
     overflow: hidden;
+}
+
+
+/*========================================================
+    
+Responsive page Design
+    
+=========================================================*/
+
+@media (max-width:250px) {
+    .container{display: none;}
+    .smallScreen{display: block;text-align: center;border: 1px solid white;margin:.3rem;padding: .5rem;}
+    .headerContainer{
+        height: 4rem;
+        padding: 1rem .7rem;
+        border: 0;
+    }
+    .headerlogo{
+        height: 2rem;
+    }
+    .headerp{
+        display: none;
+    }
+    .btn{
+        display: none;
+    }
+}
+
+@media (min-width:250px) and (max-width:480px) {
+    /* Mobile View */
+    .headerContainer{
+        height: 4rem;
+        padding: 1rem .7rem;
+    }
+    .headerlogo{
+        height: 1.7rem;
+    }
+    .headerp{
+        font-size: .8rem;
+        margin-left: .2rem;
+    }
+    .btn{
+        padding: 5px 1px;
+        font-size: .8rem;
+    }
+    .codingSection{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .container{
+        height: 130vh;
+    }
+    .title{
+        font-size: 1.7rem;
+    }
+    .codingSection{
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .codingimage img{
+        width: 17rem;
+    }
+    .codingInfo{
+        padding-left: 1rem;
+    }
+    .infoCoding{
+        font-size: 1.5rem;
+    }
+    .feedSection{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 1.5rem;
+    }
+    .info{
+        font-size: 1.5rem;
+        -webkit-text-stroke: 1px #1C1E29;
+        font-weight: bold;
+    }
+    .wave{
+        height: 10rem;
+    }
+    .wave p{
+        font-size: .8rem;
+    }
+}
+
+@media (min-width:481px) and (max-width:767px) {
+    /* Extra Small Devices */
+    
+    /* feedback form alignment is showing problem */
+
+    .headerContainer{
+        height: 4rem;
+    }
+    .container{
+        height: 130vh;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .codingSection{
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .codingimage img{
+        width: 20rem;
+    }
+    .infoCoding{
+        font-size: 1.7rem;
+    }
+    .btn{
+        padding: 5px 10px;
+    }
+    .feedSection{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 1.5rem;
+    }
+    .info{
+        font-size: 1.5rem;
+        -webkit-text-stroke: 1px #1C1E29;
+        font-weight: bold;
+    }
+    .wave{
+        height: 10rem;
+    }
+    .wave p{
+        font-size: 1rem;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    /* small Devices */
+
+    /* header page is working fine */
+    /* homepage is working fine */
+    .title{
+        font-size: 3rem;
+    }
+    .infoCoding{
+        font-size: 1.5rem;
+    }
+    /* feedback page */
+    .info{
+        font-size: 1.7rem;
+    }
+    /* footer page */
+    .wave{
+        height: 13rem;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    /* Large Tablets and laptop Devices */
+
+    /* header is working fine */
+    /* homepage is working fine */
+    /* coding page */
+    .container{
+        height: 120vh;
+    }
+    .infoCoding{
+        font-size: 1.7rem;
+    }
+    /* feedback page */
+    .info{
+        font-size: 2rem;
+    }
+    /* footer page */
+    .wave{
+        height: 10rem;
+    }
+}
+
+@media (min-width:1200px){
+    /* Desktop Devices */
+
+    /* header working fine */
+    /* landing page working fine */
+    /* coding page */
+    .codingimage img{
+        margin-top: 2rem;
+        height: 25rem;
+        width: 30rem;
+        margin-bottom: 1rem;
+    }
+    .infoCoding{
+        font-size: 2rem;
+    }
+    /* feedback section is working fine */
+    .wave{
+        height: 15rem;
+    }
 }
