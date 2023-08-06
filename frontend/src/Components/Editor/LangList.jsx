@@ -15,7 +15,8 @@ function LangList() {
     <div className="LangContainer">
             <div className="langSection languages">
                 <div className="languageBorder">
-                        <NavLink to="/editor/javascript"><img src={js} alt="JLanguage " /></NavLink>
+                        {/* <NavLink to="/editor/javascript"><img src={js} alt="JLanguage " /></NavLink> */}
+                        <a href="/editor/javascript"><img src={js} alt="JLanguage " /></a>
                 </div>
                 <div className="languageBorder">
                         <NavLink to="/editor/html"><img src={html} alt="Language "  /></NavLink>

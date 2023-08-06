@@ -1,0 +1,30 @@
+
+  const originalConsoleLog = console.log;
+
+  useEffect(()=>{
+    console.log = function(message) {
+      const consoleOutput = document.getElementById('consoleOutput');
+      const btn = document.querySelector('.btn1');
+      btn.addEventListener('click',()=>{
+        // const consoleOutput = document.getElementById('consoleOutput');
+        consoleOutput.innerText = "";
+      })
+      const paragraph = document.createElement('p');
+      paragraph.textContent = message;
+
+      consoleOutput.appendChild(paragraph);
+      originalConsoleLog.apply(console, arguments);
+    };
+  },[])
+  
+  
+
+    // let i = 0;
+    // while (i < arguments.length) {
+    //   consoleOutput.innerHTML = "";
+    //     const paragraph = document.createElement('p');
+    //     paragraph.textContent = arguments[i];
+    //     consoleOutput.appendChild(paragraph);
+    //     originalConsoleLog.apply(console, arguments[i]);
+    //     i++;
+    // }

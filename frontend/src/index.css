@@ -611,6 +611,8 @@ JavaScript Editor page Design
 .snippet{
     border: 0.1px solid white;
     padding: .5rem;
+    height: 82vh;
+    overflow: auto;
 }
 .runbtn{
     display: flex;

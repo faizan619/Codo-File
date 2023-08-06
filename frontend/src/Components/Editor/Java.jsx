@@ -13,7 +13,7 @@ function Java() {
                 <div className="PlaygroundMain">
                 <div className='runHeaderJS'>
                     <div className='jsleftheaderfile jsfile'>
-                      <mark><h2>Codo File</h2></mark>
+                      <mark><h2>index.java</h2></mark>
                       <div className='runbtn'>
                       <button className='vbtn'>
                       <img className='voicebtn' src={voice} alt='voice'/>
