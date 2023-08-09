@@ -4,7 +4,7 @@ import blog_svg from '../../assets/blobanimation.svg';
 import { NavLink } from 'react-router-dom';
 
 
-function Register() {
+function Register() { 
   return (
     <>
         <img className='blob_svg blob_a' src={blog_svg} alt="backgound-svg" />  
@@ -17,37 +17,27 @@ function Register() {
                         <div className="RegisterInputField">
                             <div className="Registername">
                                 <label htmlFor=""> Username:</label><br />
-                                <input type="text" name="name" id="name" autoComplete='off' placeholder='codofile' /><br />
+                                <input type="text" name="username" id="username" autoComplete='off' placeholder='codofile' /><br />
                             </div>
                             <div className="Registeremail">
                                 <label htmlFor="">Email:</label><br />
-                                <input type="text" name="name" id="name" autoComplete='off' placeholder='CodoFile@gmail.com' /><br />
+                                <input type="text" name="email" id="email" autoComplete='off' placeholder='CodoFile@gmail.com' /><br />
                             </div>
                             <div className="Registerpassword">
                                 <label htmlFor="">Password:</label><br />
-                                <input type="password" name="name" id="name" autoComplete='off' placeholder='123456' /><br />
+                                <input type="password" name="pass" id="pass" autoComplete='off' placeholder='123456' /><br />
                             </div>
                             <div className="Registercpassword">
                                 <label htmlFor="">Confirm Password:</label><br />
-                                <input type="password" name="name" id="name" autoComplete='off' placeholder='123456' /><br />
+                                <input type="password" name="cpass" id="cpass" autoComplete='off' placeholder='123456' /><br />
                             </div>
                             <div className="Registerdomain">
-                                <label htmlFor="">Select You Domain :</label><br />
-                                <select name="domain" id="domain">.
-                                <option value="domain">Select</option>
-                                <option value="domain">Web Developer</option>
-                                <option value="domain">Python Developer</option>
-                                <option value="domain">Java Developer</option>
-                                <option value="domain">Fresher Developer</option>
-                                </select>
+                                <label htmlFor="">Profession:</label>
+                                <input type="text" name="work" id="work" autoComplete='off' placeholder='Web Developer' />
                             </div>
                             <div className="Registerdomain">
                                 <label htmlFor="">You are a :</label><br />
-                                <select name="category" id="category">.
-                                    <option value="category">Select</option>
-                                    <option value="category">Student</option>
-                                    <option value="category">Teacher</option>
-                                </select>
+                                <input type="text" name="dom" id="dom" placeholder='Student/Teacher/Learner' />
                             </div>
                         </div>
                         <NavLink to="/voice2text"><button className="btn registerbtn">Register</button></NavLink>

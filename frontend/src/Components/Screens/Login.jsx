@@ -24,7 +24,7 @@ function Login() {
             <div className="Loginname">
               <label htmlFor=""> Password:</label><br />
               <input type="password" name="name" id="name" autoComplete='off' placeholder='codofile' /><br />
-            </div>
+            </div> 
             <button className='btn' onClick={() => console.log('clicked')}>Log In</button>
           </form>
         </div>
