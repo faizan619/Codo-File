@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken')
 const express = require('express');
 const router = express.Router();
 const PORT = process.env.PORT;
@@ -14,7 +15,7 @@ router.get('/',(req,res)=>{
 router.post('/register',async (req,res)=>{ 
     const {username,email,password,cpassword,role} = req.body;
     if(!username || !email || !password || !cpassword && role){
-        return res.status(422).send({Error: "Please Enter Completed Details for Processing"});
+        return res.status(422).send({Error: "faizan Enter Completed Details for Processing"});
     }
 
     try{
@@ -43,6 +44,7 @@ router.post('/register',async (req,res)=>{
 
 router.post('/login', async (req,res)=>{
     try{
+        let token;
         let {username,password} = req.body;
 
         if(!username || !password){
@@ -53,6 +55,13 @@ router.post('/login', async (req,res)=>{
 
         if(userLogin){
             const isMatch = await bcrypt.compare(String(password), String(userLogin.password));
+
+            token = await userLogin.generateAuthToken();
+            console.log(`The new Token Generated is : ${token}`)
+            res.cookie("jwt_users_token",token,{
+                expires:new Date(Date.now() + 25892000000),   //it is 30 days;
+                httpOnly:true
+            });
 
             if(!isMatch){
                 res.status(400).json({error:"Password Wrong"});

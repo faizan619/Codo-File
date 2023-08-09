@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = new express();
 const PORT = process.env.PORT ;
- 
+  
 require('./db/conn'); 
 
 app.use(express.json());
@@ -16,6 +16,7 @@ const consoleURL = (req,res,next)=>{
 }
 
 app.get('/',consoleURL,(req,res)=>{
+    // res.cookie("test","faizan");
     res.send('Hello world');
 })
 app.get('*',consoleURL,(req,res)=>{
