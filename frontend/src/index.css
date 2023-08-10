@@ -29,8 +29,8 @@ html{
     padding: 10px 15px;
 }
 .btn:hover{
-    transition: all ease-in-out .5s;
-    box-shadow: 1px 1px 10px white;
+    transition: all ease-in-out .2s;
+    box-shadow: 1px 1px 5px white;
 }
 .blob_a{
     position: absolute;
@@ -74,6 +74,10 @@ textarea{
     width: 100%;
     border-radius: .5rem;
     padding: .3rem;
+}
+#uni{
+    display: flex;
+    flex-direction: row-reverse;
 }
 /*
 .blob_svg{
@@ -440,6 +444,7 @@ Login Page Designing...
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 10;
 }
 .LoginForm{
     background-color: var(--second-background-color);
@@ -574,6 +579,10 @@ JavaScript Editor page Design
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
+/* .jsplaygroundMain{
+    height: 90vh;
+    overflow: auto;
+} */
 .jsplayground{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -703,6 +712,8 @@ image to text page Design
 }
 .imagefiletype{
     border: 1px solid white;
+    max-width: 90%;
+    width: 50%;
     margin: 1rem  0;
 }
 .image-text-box{
@@ -748,10 +759,43 @@ Responsive page Design
     .btn{
         display: none;
     }
+    .registerMainComponent{
+        display: none;
+    }
+    .loginContainer{
+        display: none;
+    }
 }
 
 @media (min-width:250px) and (max-width:480px) {
     /* Mobile View */
+
+    .registerMainComponent{
+        height: 100%;
+    }
+    .registerSVG img{
+        display: none;
+    }
+    .registerSection{
+        grid-template-columns: 1fr;
+    }
+    form{
+        padding: 7%;
+    }
+    .registerLabels{
+        font-size: .9rem;
+    }
+    .loginContainer .title{
+        margin: 1rem;
+    }
+    .loginContainer{
+        height: 100%; 
+        margin-top: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+
+
     .headerContainer{
         height: 4rem;
         padding: 1rem .7rem;
@@ -815,6 +859,28 @@ Responsive page Design
     
     /* feedback form alignment is showing problem */
 
+    .registerMainComponent{
+        height: 100%;
+    }
+    .registerSVG img{
+        display: none;
+    }
+    .registerSection{
+        grid-template-columns: 1fr;
+    }
+    .loginContainer .title{
+        margin: 1rem;
+    }
+    .loginContainer{
+        height: 100%; 
+        margin-top: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    form{
+        padding: 7%;
+    }
+
     .headerContainer{
         height: 4rem;
     }
@@ -860,52 +926,63 @@ Responsive page Design
 @media (min-width:768px) and (max-width:991px) {
     /* small Devices */
 
-    /* header page is working fine */
-    /* homepage is working fine */
     .title{
         font-size: 3rem;
     }
     .infoCoding{
         font-size: 1.5rem;
     }
-    /* feedback page */
     .info{
         font-size: 1.7rem;
     }
-    /* footer page */
     .wave{
         height: 13rem;
+    }
+    form{
+        padding: 5%;
+    }
+    
+    .registerSVG{
+        display: flex;
+        justify-content: center;
+    }
+    .registerSVG img{
+        height: 20rem;
+        width: 20rem;
     }
 }
 
 @media (min-width:992px) and (max-width:1199px) {
     /* Large Tablets and laptop Devices */
 
-    /* header is working fine */
-    /* homepage is working fine */
-    /* coding page */
     .container{
         height: 120vh;
     }
     .infoCoding{
         font-size: 1.7rem;
     }
-    /* feedback page */
     .info{
         font-size: 2rem;
     }
-    /* footer page */
     .wave{
         height: 10rem;
+    }
+    form{
+        padding: 5%;
+    }
+    .registerSVG{
+        display: flex;
+        justify-content: center;
+    }
+    .registerSVG img{
+        height: 20rem;
+        width: 20rem;
     }
 }
 
 @media (min-width:1200px){
     /* Desktop Devices */
 
-    /* header working fine */
-    /* landing page working fine */
-    /* coding page */
     .codingimage img{
         margin-top: 2rem;
         height: 25rem;
@@ -915,8 +992,12 @@ Responsive page Design
     .infoCoding{
         font-size: 2rem;
     }
-    /* feedback section is working fine */
     .wave{
         height: 15rem;
+    }
+
+    /* Registration Form Design */
+    .registerMainComponent{
+        height: 120vh;
     }
 }

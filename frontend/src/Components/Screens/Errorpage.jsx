@@ -2,7 +2,7 @@ import { gsap } from 'gsap';
 import { Draggable } from 'gsap/Draggable';
 import { useEffect } from 'react';
 import LangList from '../Editor/LangList';
-import headerImg from '../../assets/favi-removebg-preview.png'
+// import headerImg from '../../assets/favi-removebg-preview.png'
 import { NavLink } from 'react-router-dom';
 gsap.registerPlugin(Draggable);
 

@@ -5,10 +5,14 @@ import { NavLink } from 'react-router-dom';
 
 
 function Register() { 
+     const width2 = window.outerWidth;
   return (
     <>
-        <img className='blob_svg blob_a' src={blog_svg} alt="backgound-svg" />  
+    <div className="smallScreen">
+      <mark>The Screen is Visible with width more than 250px <br/><br/><hr/><br/>Screen Size: {width2}px</mark>
+    </div>
         <div className="registerMainComponent">
+        <img className='blob_svg blob_a' src={blog_svg} alt="backgound-svg" />  
             <img className='blob_svg2 blob_a' src={blog_svg} alt="backgound-svg" />
             <h1 className='registerTitle title'>Registration</h1><br/>
             <div className="registerSection">
@@ -16,31 +20,31 @@ function Register() {
                     <form>
                         <div className="RegisterInputField">
                             <div className="Registername">
-                                <label htmlFor=""> Username:</label><br />
+                                <label className='registerLabels' htmlFor="username"> Username:</label><br />
                                 <input type="text" name="username" id="username" autoComplete='off' placeholder='codofile' /><br />
                             </div>
                             <div className="Registeremail">
-                                <label htmlFor="">Email:</label><br />
+                                <label className='registerLabels' htmlFor="email">Email:</label><br />
                                 <input type="text" name="email" id="email" autoComplete='off' placeholder='CodoFile@gmail.com' /><br />
                             </div>
                             <div className="Registerpassword">
-                                <label htmlFor="">Password:</label><br />
+                                <label className='registerLabels' htmlFor="pass">Password:</label><br />
                                 <input type="password" name="pass" id="pass" autoComplete='off' placeholder='123456' /><br />
                             </div>
                             <div className="Registercpassword">
-                                <label htmlFor="">Confirm Password:</label><br />
+                                <label className='registerLabels' htmlFor="cpass">Confirm Password:</label><br />
                                 <input type="password" name="cpass" id="cpass" autoComplete='off' placeholder='123456' /><br />
                             </div>
                             <div className="Registerdomain">
-                                <label htmlFor="">Profession:</label>
+                                <label className='registerLabels' htmlFor="work">Profession:</label>
                                 <input type="text" name="work" id="work" autoComplete='off' placeholder='Web Developer' />
                             </div>
                             <div className="Registerdomain">
-                                <label htmlFor="">You are a :</label><br />
+                                <label className='registerLabels' htmlFor="dom">You are a :</label><br />
                                 <input type="text" name="dom" id="dom" placeholder='Student/Teacher/Learner' />
                             </div>
                         </div>
-                        <NavLink to="/voice2text"><button className="btn registerbtn">Register</button></NavLink>
+                        <NavLink to="/login"><button className="btn registerbtn">Register</button></NavLink>
                     </form>
                 </div>
                 <div className="registerSVG">

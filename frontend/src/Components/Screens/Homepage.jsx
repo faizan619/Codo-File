@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../Header';
+// import Header from '../Header';
 import LandingPage from '../HomepageScreen/LandingPage';
 import CodingPage from '../HomepageScreen/CodingPage'; 
 import ImageCod from '../../assets/JavaScript frameworks-rafiki.svg'
@@ -30,14 +30,16 @@ function Homepage() {
           path='/editor/javaScript' 
           image={ImageCod}
           // poss={{'flexDirection':'row'}}
+          
         />
-        {/* <CodingPage
+        <CodingPage
           title="Python Compiler"
           path="/editor/python"
           info={<>Leash out All your <mark> Logic and Understanding</mark> with the Easiest Programming Language <mark>Python</mark> in this Super Easy Web IDE</>}
           image={Pycod}
-          poss={{'flexDirection':'row-reverse'}}
-        /> */}
+          // poss={{'flexDirection':'row-reverse'}}
+          uniId={"uni"}
+        />
         <CodingPage
           title="Java Compiler"
           path='/editor/java'
@@ -45,7 +47,7 @@ function Homepage() {
           image={CodJava}
           // poss={{'flexDirection':'row'}}
         />
-        {/* <CodingPage
+        <CodingPage
           title="Real-Time Website Editor"
           path="/editor/html"
           info={<>
@@ -53,8 +55,9 @@ function Homepage() {
             <mark>Try</mark> our <mark>Real Time Browser</mark> that Automatically updates the Page as per your Code/Program.
           </>}
           image={HtmlCod}
-          poss={{'flexDirection':'row-reverse'}}
-        /> */}
+          // poss={{'flexDirection':'row-reverse'}}
+          uniId={"uni"}
+        />
         <CodingPage
           title="Image To Code"
           path='/editor/image2text'
@@ -64,15 +67,16 @@ function Homepage() {
           </>}
           // poss={{'flexDirection':'row'}}
         />
-        {/* <CodingPage
+        <CodingPage
           title="Voice To Code"
           path='/editor/voice2text'
           image={SpeechCod}
           info={<>
             <mark>"Words Speak more than Actions"</mark> let this quote get Install into your life by our latest tool <mark>Voice to Text</mark> feature .
           </>}
-          poss={{'flexDirection':'row-reverse'}}
-        /> */}
+          // poss={{'flexDirection':'row-reverse'}}
+          uniId={"uni"}
+        />
         <CodingPage
           title="What's More?"
           info={<>A <mark>Programmer</mark> has no Limitation towards <mark>Learning and Improving</mark> the World Through its Skills and Knowledge</>}

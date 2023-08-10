@@ -44,7 +44,6 @@ function Python() {
                         height='80vh'
                         theme={darcula}
                         // extensions={[javascript({jsx:true})]}
-                        // extensions={[python()]}
                         extensions={[python()]}
                         // onChange={(value) =>{
                         //   setcode(value)

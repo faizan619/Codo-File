@@ -86,7 +86,7 @@ function Javascript() {
                     <div className='rightplayground snippet' id='consoleOutput' >
                       {/* {setcode} */}
                       {/* {setOutput} */}
-                      {output}
+                      {/* {output} */}
                     </div>
                   </div>
                 </div>

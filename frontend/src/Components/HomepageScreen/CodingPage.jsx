@@ -7,7 +7,9 @@ function CodingPage(props) {
     <>
         <div className="codingContainer container"> 
             <h1 className='title'>{props.title}</h1>
-            <div className="codingSection" style={props.poss}>
+            <div className="codingSection" id={props.uniId}
+            //  style={props.poss}
+            >
                 <div className="codingInfo codingsec">
                     <div className="infoCoding infoDetails">
                     {props.info}
