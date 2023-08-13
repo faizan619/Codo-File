@@ -310,6 +310,9 @@ Footer page section Designing...
     font-size: 1.3rem;
     font-weight: bold;
 }
+.footer_faizan{
+    color: var(--background-color);
+}
 .wave-container::before {   
       z-index: 1;
     content: "";
@@ -542,7 +545,7 @@ Voice 2 Text Playground Page Designing...
 }
 
 .voice2TextOutput h3{
-    text-transform: capitalize;
+    text-transform: lowercase;
 }
 .voice2TextOutput{
     height: 20rem;
@@ -635,8 +638,12 @@ JavaScript Editor page Design
     display: flex;
     gap: 1rem;
 }
+.vbtn{
+    border-radius: .5rem;
+    padding: .3rem .5rem;
+}
 .voicebtn{
-    height: 2rem;
+    height: 1.7rem;;
 }
 
 /*========================================================

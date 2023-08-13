@@ -4,6 +4,8 @@ import voice from '../../assets/image.png';
 import CodeMirror from '@uiw/react-codemirror';
 import { darcula } from '@uiw/codemirror-theme-darcula';
 import { javascript } from '@codemirror/lang-javascript';
+import copy_icon from '../../assets/copy_icon.gif';
+import download_icon from '../../assets/download_logo.png';
 
 
 function Javascript() {
@@ -60,7 +62,10 @@ function Javascript() {
                       <mark><h2>index.js</h2></mark>
                       <div className='runbtn'>
                       <button className='vbtn'>
-                      <img className='voicebtn' src={voice} alt='voice'/>
+                      <img className='voicebtn' src={copy_icon} alt='voice'/>
+                      </button>
+                      <button className='vbtn'>
+                      <img className='voicebtn' src={download_icon} alt='voice'/>
                       </button>
                         <button className='btn btn1' onClick={runCode}>RUN</button>
                       </div>

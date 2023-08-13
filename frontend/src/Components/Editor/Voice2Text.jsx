@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import 'regenerator-runtime/runtime'; 
 import useClipboard from "react-use-clipboard";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
@@ -7,14 +8,76 @@ import LangList from './LangList';
 
 
 function Voice2Text() {
-  const [textToCopy,setTextToCopy] = useState();
-  const [isCopied, setCopied] = useClipboard(textToCopy);
-    //   const startListening = () => SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
-  const startListening = () => SpeechRecognition.startListening({ continuous: true });
-  const { transcript, browserSupportsSpeechRecognition } = useSpeechRecognition();
+  let [textToCopy,setTextToCopy] = useState();
+  let [isCopied, setCopied] = useClipboard(textToCopy);
+
+  const phraseToSymbolMap = {
+    'semicolon': ';',
+    'semi colon': ';',
+    'comma': ',',
+    'colon':':',
+    'dot':'.',
+    'open parentheses':'(',
+    'close parentheses':')',
+    'open round bracket':'(',
+    'open roundbracket':'(',
+    'close round bracket':')',
+    'closed round bracket':')',
+    'close roundbracket':')',
+    'closed roundbracket':')',
+    'open curly bracket':'{',
+    'open curlybracket':'{',
+    'close curlybracket':'}',
+    'close curly bracket':'}',
+    'open squarebracket':'[',
+    'open square bracket':'[',
+    'clsoe square bracket':']',
+    'close squarebracket':']',
+    'open single codes':"'",
+    'open singlcodes':"'",
+    'close single codes':"'",
+    'closed single codes':"'",
+    'close singlcodes':"'",
+    'closed singlcodes':"'",
+    'open double codes':'"',
+    'open doublcuote':'"',
+    'close double cuote':'"',
+    'close doublcuote':'"'
+  }
+
+    const startListening = () => SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
+
+  const processTranscript = (transcript) => {
+    console.log('Original transcript:', transcript); // Add this line
+    let processedTranscript = transcript;
+  
+    for (const [phrase, symbol] of Object.entries(phraseToSymbolMap)) {
+      const regex = new RegExp(`\\b${phrase}\\b`, 'gi'); // Use word boundary and case-insensitive flag
+      processedTranscript = processedTranscript.replace(regex, symbol);
+    }
+  
+    console.log('Processed transcript:', processedTranscript); // Add this line
+    setTextToCopy(processedTranscript);
+  };
+
+  const { transcript,resetTranscript, browserSupportsSpeechRecognition } = useSpeechRecognition();
+
+  
+  useEffect(() => {
+    processTranscript(transcript);
+  }, [transcript]);
+
   if (!browserSupportsSpeechRecognition) {
     return <span>Browser doesnt support speech recognition.</span>;
   }
+
+  const clearAll = ()=>{
+    // const tar = document.querySelector(".voiceresultclass")
+    // tar.innerHTML = ""
+    setTextToCopy("");
+    resetTranscript();
+  }
+
   return (
     <>
         <div className="voiceContainer">
@@ -25,11 +88,13 @@ function Voice2Text() {
                 <div className="voicePlayground">
                     <h1 className="title">Voice to Text Converter</h1>
                     <div className="voiceTextContainer">
-                        <div className="voice2TextOutput" onClick={()=>setTextToCopy(transcript)}>
-                            <mark><h3 contentEditable>{transcript}</h3></mark>
+                        <div className="voice2TextOutput" onClick={()=>setTextToCopy(textToCopy)}>
+                            {/* <mark><h3 contentEditable>{transcript}</h3></mark> */}
+                            <mark><h3 className='voiceresultclass' contentEditable>{textToCopy}</h3></mark>
                         </div>
                         <div className="btngroup">
-                            <button onClick={setCopied}>Copied? {isCopied ? "Yes!" : "Nope!"}</button>
+                            <button onClick={clearAll}>Clear</button>
+                            <button onClick={setCopied}>{isCopied ? "Copied" : "Copy"}</button>
                             <button onClick={startListening}>Start Listening</button>
                             <button onClick={SpeechRecognition.stopListening}>Stop Listening</button>
                         </div>
@@ -40,7 +105,6 @@ function Voice2Text() {
     </>
   )
 }
-
 export default Voice2Text;
 
 
@@ -57,77 +121,5 @@ npm install --save-dev @babel/plugin-transform-runtime @babel/runtime
 npm install react-use-clipboard
 
 npm run dev
-
-
-
-
-import 'regenerator-runtime/runtime';
-import useClipboard from "react-use-clipboard";
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-import React, { useState, useEffect } from 'react';
-import LangList from './LangList';
-
-function Voice2Text() {
-  const [textToCopy, setTextToCopy] = useState();
-  const [isCopied, setCopied] = useClipboard(textToCopy);
-
-  const phraseToSymbolMap = {
-    'semi colon': ';',
-    'comma': ',',
-    // Add more mappings as needed
-  };
-
-  const startListening = () => {
-    SpeechRecognition.startListening({ continuous: true });
-  };
-
-  const processTranscript = (transcript) => {
-    let processedTranscript = transcript;
-
-    for (const [phrase, symbol] of Object.entries(phraseToSymbolMap)) {
-      processedTranscript = processedTranscript.replace(phrase, symbol);
-    }
-
-    setTextToCopy(processedTranscript);
-  };
-
-  const { transcript, browserSupportsSpeechRecognition } = useSpeechRecognition();
-
-  useEffect(() => {
-    processTranscript(transcript);
-  }, [transcript]);
-
-  if (!browserSupportsSpeechRecognition) {
-    return <span>Browser doesn't support speech recognition.</span>;
-  }
-
-  return (
-    <>
-      <div className="voiceContainer">
-        <div className="voiceBody">
-          <div className="leftLang">
-            <LangList />
-          </div>
-          <div className="voicePlayground">
-            <h1 className="title">Voice to Text Converter</h1>
-            <div className="voiceTextContainer">
-              <div className="voice2TextOutput">
-                <mark><h3>{textToCopy}</h3></mark>
-              </div>
-              <div className="btngroup">
-                <button onClick={setCopied}>Copied? {isCopied ? "Yes!" : "Nope!"}</button>
-                <button onClick={startListening}>Start Listening</button>
-                <button onClick={SpeechRecognition.stopListening}>Stop Listening</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
-
-export default Voice2Text;
-
 
 */

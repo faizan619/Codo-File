@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import LangList from './LangList'
 import voice from '../../assets/image.png'
 import axios from 'axios';
+import copy_icon from '../../assets/copy_icon.gif';
+import download_icon from '../../assets/download_logo.png';
 
 
 function Java() {
@@ -42,9 +44,12 @@ function Java() {
                     <div className='jsleftheaderfile jsfile'>
                       <mark><h2>index.dart</h2></mark>
                       <div className='runbtn'>
-                      {/* <button className='vbtn'> */}
-                      {/* <img className='voicebtn' src={voice} alt='voice'/> */}
-                      {/* </button> */}
+                      <button className='vbtn'>
+                      <img className='voicebtn' src={copy_icon} alt='voice'/>
+                      </button>
+                      <button className='vbtn'>
+                      <img className='voicebtn' src={download_icon} alt='voice'/>
+                      </button>
                         <button className='btn' onClick={handleSubmit}>RUN</button>
                       </div>
                     </div>

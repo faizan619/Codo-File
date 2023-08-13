@@ -1,10 +1,8 @@
 import React,{ useState } from 'react';
 import LangList from './LangList'
-import voice from '../../assets/image.png' 
-import CodeMirror from '@uiw/react-codemirror';
-import { darcula } from '@uiw/codemirror-theme-darcula';
-import { python } from '@codemirror/lang-python';
 import axios from 'axios';
+import copy_icon from '../../assets/copy_icon.gif';
+import download_icon from '../../assets/download_logo.png';
 
 
 function Python() {
@@ -33,6 +31,10 @@ function Python() {
     box.innerHTML = "";
   }
 
+  const copyContent = ()=>{
+    navigator.clipboard.writeText(code);
+  }
+
 
   return (
     <> 
@@ -46,9 +48,12 @@ function Python() {
                     <div className='jsleftheaderfile jsfile'>
                       <mark><h2>index.py</h2></mark>
                       <div className='runbtn'>
-                      {/* <button className='vbtn'>
-                      <img className='voicebtn' src={voice} alt='voice'/>
-                      </button> */}
+                      <button className='vbtn'>
+                      <img className='voicebtn' onClick={copyContent} src={copy_icon} alt='copy'/>
+                      </button>
+                      <button className='vbtn'>
+                      <img className='voicebtn' src={download_icon} alt='download'/>
+                      </button>
                         <button className='btn' onClick={handleSubmit}>RUN</button>
                       </div>
                     </div>
