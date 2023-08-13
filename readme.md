@@ -9,6 +9,22 @@
 
     4. npm install
 
+    5. cd .\frontend\
+
+    6. npm install
+
+    7. npm i gsap
+
+    8. cd..
+
+    9. cd .\backend\
+
+    10. npm install
+
+    11. cd..
+
+    12. npm run both
+
 ## About this Project
 
   Build with Passion and Dedication...
