@@ -41,9 +41,9 @@ function Homepage() {
           uniId={"uni"}
         />
         <CodingPage
-          title="Java Compiler"
+          title="Dart Compiler"
           path='/editor/java'
-          info={<><mark>Java</mark> is a Language that directly connect with the computer memory System.Embrace your <mark>Knowledge</mark> with <mark>Java Code Editor</mark></>}
+          info={<><mark>Dart</mark> is a Programming Language <mark>Developed by Google</mark> and it is use with <mark>Flutter </mark>to Create Mobile and Web Application .Embrace your <mark>Knowledge</mark> with <mark>Dart Code Editor</mark></>}
           image={CodJava}
           // poss={{'flexDirection':'row'}}
         />

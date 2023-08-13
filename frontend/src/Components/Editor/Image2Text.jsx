@@ -48,7 +48,7 @@ function Image2Text() {
                     <button onClick={handleClick} className='btn'>Convert To Text</button>
                     
                     <div className="image-text-box">
-                      <p>{text}</p>
+                      <p contentEditable>{text}</p>
                     </div>
                   </main>
                 </div>

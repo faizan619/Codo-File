@@ -79,6 +79,14 @@ textarea{
     display: flex;
     flex-direction: row-reverse;
 }
+.dartpython{
+    height:100%;
+    padding: .5rem 1rem;
+    font-size: 1.3rem;
+}
+.rightplayground{
+    font-size: 1.3rem;
+}
 /*
 .blob_svg{
     bottom: 0%;

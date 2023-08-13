@@ -10,7 +10,7 @@ function Feedback() {
             <h1 className='title'>Let's Work Together</h1>
             <div className='feedSection'>
                 <div className='feedinfo'>
-                    <p className="info">For Being <mark>Amazing</mark>.Let's Become a part of a amazing community <mark>Codo File</mark>.</p>
+                    <p className="info">For Being <mark>Amazing</mark>.Let's Become a part of a amazing community <mark>Codo File</mark>.You can even Tell your's <mark>Issue Related to Website for Improving the Site</mark></p>
                 </div>
                 <div className='feedform'>
                     <form>
