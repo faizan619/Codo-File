@@ -1,13 +1,15 @@
+const cors = require('cors')
 const dotenv = require('dotenv');
 dotenv.config({path:'./config.env'});
 const mongoose = require('mongoose');
 const express = require('express');
 const app = new express();
 const PORT = process.env.PORT ;
-  
+
 require('./db/conn'); 
 
-app.use(express.json());
+app.use(cors()); 
+app.use(express.json()); 
 app.use(require('./router/auth'));
 
 const consoleURL = (req,res,next)=>{

@@ -3,6 +3,10 @@ const express = require('express');
 const router = express.Router();
 const PORT = process.env.PORT;
 const bcrypt = require('bcryptjs');
+const {generatefile} = require('./generatePy')
+const {executepy} = require("./executepy")
+const {executeDart} = require('./executeDart')
+const {generateDartfile} = require('./generateDart')
 
 require('../db/conn');
 const User = require('../model/userSchema')
@@ -12,6 +16,46 @@ router.get('/',(req,res)=>{
     console.log(`User at URL : localhost:${PORT}${req.url}`)
 })
 
+//################ python compiler code here ##################
+router.use(express.urlencoded({extended:true}))
+router.post('/runpy',async(req,res)=>{
+    const {language="py",code="print('hello python')"} = req.body;
+
+    if(code === ""){
+        return res.status(400).json({success:false,error:"Please Enter Code"});
+    }
+    try{
+        // need to generate a py file from the request 
+        const filepath = await generatefile(language,code)
+        // we need to run the file and sent response back
+        const output = await executepy(filepath)
+        return res.json({filepath,output});
+    }
+    catch(err){
+        res.status(500).json({error:"faizan Something went wrong"});
+    }
+})
+// ################## dart compiler code here ##################
+router.post('/rundart',async(req,res)=>{
+    const {language="dart",code="void main(){print('hello dart');}"} = req.body;
+
+    if(code === ""){
+        return res.status(400).json({success:false,error:"Please Enter Code"});
+    }
+    try{
+        // need to generate a py file from the request 
+        const filepath = await generateDartfile(language,code)
+        // we need to run the file and sent response back
+        const output = await executeDart(filepath)
+        return res.json({filepath,output});
+    }
+    catch(err){
+        res.status(500).json({error:"faizan Something went wrong"});
+    }
+})
+
+
+// registration code here
 router.post('/register',async (req,res)=>{ 
     const {username,email,password,cpassword,role} = req.body;
     if(!username || !email || !password || !cpassword && role){
@@ -42,6 +86,8 @@ router.post('/register',async (req,res)=>{
     console.log(`You are a : ${role}`);
 })
 
+
+// login code here
 router.post('/login', async (req,res)=>{
     try{
         let token;
@@ -62,7 +108,7 @@ router.post('/login', async (req,res)=>{
                 expires:new Date(Date.now() + 25892000000),   //it is 30 days;
                 httpOnly:true
             });
-
+ 
             if(!isMatch){
                 res.status(400).json({error:"Password Wrong"});
             }
