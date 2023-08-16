@@ -4,6 +4,8 @@ import Tesseract from 'tesseract.js';
 
 function Image2Text() {
 
+  const [isLoading,setIsLoading] = useState(false);
+
   const [imagePath,setImagePath] = useState("/mainLogo.png");
   const [text,setText] = useState("");
 
@@ -12,7 +14,7 @@ function Image2Text() {
   }
 
   const handleClick = () => {
-  
+    setIsLoading(true);
     Tesseract.recognize(
       imagePath,'eng',
       { 
@@ -29,7 +31,7 @@ function Image2Text() {
       let text = result.data.text
       setText(text);
       console.log(confidence,text);
-  
+      setIsLoading(false)
     })
   }
 
@@ -45,10 +47,12 @@ function Image2Text() {
                   <main className='imageMain'>
                     <img src={imagePath} className='Image-Logo' alt="logo" />
                     <input className='imagefiletype' type="file" onChange={handleChange} />
-                    <button onClick={handleClick} className='btn'>Convert To Text</button>
+                    {/* <button onClick={handleClick} className='btn'>Convert To Text</button> */}
+                    <input type="submit" className='btn' onClick={handleClick} value={isLoading? "Loading...":"Convert To Text"} />
                     
                     <div className="image-text-box">
-                      <p contentEditable>{text}</p>
+                      {/* <p contentEditable>{text}</p> */}
+                      <textarea name="vtext" id="vtext" placeholder='Your Text Here' value={text} onChange={(e)=>{setText(e.target.value)}}></textarea>
                     </div>
                   </main>
                 </div>
