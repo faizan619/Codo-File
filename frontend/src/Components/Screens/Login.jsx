@@ -1,11 +1,67 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useContext, useState } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
 import Login_svg from '../../assets/Back-to-work-pana.png';
 import blog_svg from '../../assets/blobanimation.svg';
+// import { useFormik } from 'formik';
+// import { registerSchema } from './schema';
 
+
+// const LoginValues = {
+//   username:"",
+//   pass:"",
+// }
+
+import {UsedContext} from '../App'
 
 function Login() {
+
+  const {state,dispatch} = useContext(UsedContext);
+
+
+  const history2 = useNavigate();
+
   const width2 = window.outerWidth;
+
+  const [username,setUsername] = useState('');
+  const [password,setpassword] = useState('');
+
+  // http://localhost:3000/login
+  const loginUser = async (e)=>{
+    e.preventDefault();
+    const res = await fetch('http://localhost:5000/login',{
+      method:'POST',
+      headers:{
+        "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+          username,
+          password
+        })
+    })
+
+    const data = res.json();
+
+    if(res.status === 400 || !data){
+      window.alert("Invalid Credentials-Check you username and password");
+    }
+    else{
+      dispatch({type:'USER',payload:true});
+      window.alert("Login Successfully");
+      history2('/');
+    }
+  }
+
+//   const {values,errors,handleBlur,touched,handleChange,handleSubmit} =  useFormik({
+//     initialValues:LoginValues,
+//     validationSchema:registerSchema,
+//     onSubmit:(values,action)=>{
+//         console.log(
+//             " ~ File: Register.jsx ~ line 14 ~ Register ~ values ",
+//             values
+//         );
+//         action.resetForm();
+//     },
+// });
 
   return (
     <> 
@@ -19,18 +75,39 @@ function Login() {
                     <img src={Login_svg} alt="" />
                     <p>Don't have an Account? <NavLink to="/register"><span className='registerSwitch'>Create Account</span></NavLink></p>
         </div>
-        <div className="loginDetails">
+        <div className="loginDetails"> 
           <h1 className='title logintitle'>Login</h1>
-          <form className='LoginForm'>
+          {/* <form className='LoginForm' onSubmit={handleSubmit}> */}
+          <form className='LoginForm' method='POST'>
             <div className="Loginname">
               <label htmlFor=""> Username:</label><br />
-              <input type="text" name="name" id="name" autoComplete='off' placeholder='codofile' /><br />
+              <input type="text" name="username" id="username" autoComplete='off'
+               placeholder='codofile' 
+               value={username}
+               onChange={(e)=>setUsername(e.target.value)}
+              //  value={values.username} 
+              //  onChange={handleChange} 
+              //  onBlur={handleBlur}
+
+               /><br />
+              {/* {errors.username && touched.username ? (<p className='errorlabelinput'>{errors.username}</p>) : null} */}
+
             </div>
             <div className="Loginname">
               <label htmlFor=""> Password:</label><br />
-              <input type="password" name="name" id="name" autoComplete='off' placeholder='codofile' /><br />
+              <input type="password" name="pass" id="pass" autoComplete='off'
+               placeholder='codofile' 
+               value={password}
+               onChange={(e)=>setpassword(e.target.value)}
+
+              //  value={values.pass} 
+              //  onChange={handleChange} 
+              //  onBlur={handleBlur}
+                /><br />
+              {/* {errors.pass && touched.pass ? (<p className='errorlabelinput'>{errors.pass}</p>) : null} */}
+
             </div> 
-            <NavLink to="/"><button className='btn' onClick={() => console.log('clicked')}>Log In</button></NavLink>
+            <input type="submit" name="submit" id="submit" className='btn' onClick={loginUser} />
           </form>
         </div>
       </div>
