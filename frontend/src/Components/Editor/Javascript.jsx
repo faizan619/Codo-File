@@ -1,5 +1,138 @@
 import React, { useEffect, useState } from 'react';
 import LangList from '../Editor/LangList';
+import copy_icon from '../../assets/copy_icon.gif';
+import download_icon from '../../assets/download_logo.png';
+
+const data = new Date()
+let DayName;
+if(data.getDay() === 1){
+  DayName =  "Monday";
+}
+else if(data.getDay() === 2){
+  DayName =  "Tuesday";
+}
+else if(data.getDay() === 3){
+  DayName =  "Wednesday";
+}
+else if(data.getDay() === 4){
+  DayName =  "Thursday";
+}
+else if(data.getDay() === 5){
+  DayName =  "Friday";
+}
+
+else if(data.getDay() === 6){
+  DayName =  "Saturday";
+}
+else if(data.getDay() === 0){
+  DayName =  "Sunday"
+}
+else{
+  DayName =  "CodoFile";
+}
+
+function Javascript() {
+
+  const [code,setcode] = useState("");
+
+  const runCode = ()=>{
+      try{
+        let textCode = document.querySelector(".dartpython").value;
+        eval(textCode);
+      }
+      catch(err){
+        console.log(`${err}`);
+      }
+};
+
+
+
+const originalConsoleLog = console.log;
+
+useEffect(()=>{
+  console.log = function(message){
+    const consoleOutput = document.getElementById('consoleOutput');
+      const btn = document.querySelector('.btn1');
+      btn.addEventListener('click',()=>{
+        consoleOutput.innerText = "";
+      })
+      const paragraph = document.createElement('p');
+      paragraph.textContent = message;
+      consoleOutput.appendChild(paragraph);
+      // originalConsoleLog.apply(console,arguments);
+      originalConsoleLog.apply(console);
+    };
+  })
+
+  const clear = ()=>{
+    const box = document.querySelector("#consoleOutput");
+    box.innerHTML = "";
+  }
+
+  const copyContent = ()=>{
+    navigator.clipboard.writeText(code);
+  }
+ 
+  const codeToFile = ()=>{
+    const text = document.querySelector(".dartpython").value;
+    const blob = new Blob([text],{type:"text/javascript"});
+
+    const link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    const FileCodeName = `CodoFile-(${DayName})`;
+
+    link.download = FileCodeName;
+    link.click();
+  }
+
+  return (
+    <>
+      <div className="jsContainer"> 
+            <div className="jsBody">
+                <div className="leftLang">
+                    <LangList/>
+                </div>
+                <div className="PlaygroundMain">
+                  <div className='runHeaderJS'>
+                    <div className='jsleftheaderfile jsfile'>
+                      <mark><h2>index.js</h2></mark>
+                      <div className='runbtn'>
+                      <button className='vbtn'>
+                      <img className='voicebtn' onClick={copyContent} src={copy_icon} alt='voice'/>
+                      </button>
+                      <button className='vbtn'>
+                      <img className='voicebtn' onClick={codeToFile} src={download_icon} alt='voice'/>
+                      </button>
+                        <button className='btn btn1' onClick={runCode}>RUN</button>
+                      </div>
+                    </div>
+                    <div className='jsrightheaderfile jsfile'>
+                      <mark><p>OUTPUT</p></mark>
+                      <button className='clear' onClick={clear}>Clear</button>
+                    </div>
+                  </div>
+                  <div className='jsplayground playground'>
+                    <div className='leftplayground snippet'>
+                      <textarea className='dartpython' name="javascript" id="javascript" value={code} onChange={(e)=>setcode(e.target.value)} placeholder='console.log("Hello CodoPlayer");'></textarea>
+                    </div>
+                    <div className='rightplayground snippet' id='consoleOutput' >
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </>
+  )
+}
+
+export default Javascript
+
+
+/*
+Previous code
+
+import React, { useEffect, useState } from 'react';
+import LangList from '../Editor/LangList';
 import voice from '../../assets/image.png';
 import CodeMirror from '@uiw/react-codemirror';
 import { darcula } from '@uiw/codemirror-theme-darcula';
@@ -89,16 +222,17 @@ function Javascript() {
                       />
                     </div>
                     <div className='rightplayground snippet' id='consoleOutput' >
-                      {/* {setcode} */}
-                      {/* {setOutput} */}
-                      {/* {output} */}
+                      {/* {setcode} */
+                      /* {setOutput} */
+                      /* {output} 
+                      </div>
+                      </div>
                     </div>
-                  </div>
                 </div>
             </div>
-        </div>
-    </>
-  )
-}
-
-export default Javascript
+        </>
+      )
+    }
+    
+    export default Javascript
+*/
