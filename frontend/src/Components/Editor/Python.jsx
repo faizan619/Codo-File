@@ -1,11 +1,13 @@
 import React,{ useState } from 'react';
-import LangList from './LangList'
+import LangList from './LangList';
 import axios from 'axios';
 import copy_icon from '../../assets/copy_icon.gif';
 import download_icon from '../../assets/download_logo.png';
 
 
 function Python() {
+
+  
 
   const [code,setCode] = useState('');
   const [output,setOutput] = useState('');
@@ -35,6 +37,17 @@ function Python() {
     navigator.clipboard.writeText(code);
   }
 
+  const codeToFile = ()=>{
+    const text = document.querySelector('#python').value;
+    
+    const blob = new Blob([text],{type:"text/python"});
+
+    const link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    link.download = "codofile-python.py";
+    link.click();
+  }
+
 
   return (
     <> 
@@ -52,7 +65,7 @@ function Python() {
                       <img className='voicebtn' onClick={copyContent} src={copy_icon} alt='copy'/>
                       </button>
                       <button className='vbtn'>
-                      <img className='voicebtn' src={download_icon} alt='download'/>
+                      <img className='voicebtn' onClick={codeToFile} src={download_icon} alt='download'/>
                       </button>
                         <button className='btn' onClick={handleSubmit}>RUN</button>
                       </div>
@@ -64,22 +77,7 @@ function Python() {
                   </div>
                   <div className='jsplayground playground'>
                     <div className='leftplayground snippet'>
-                    <textarea className='dartpython' name="python" id="python" value={code} onChange={(e)=>setCode(e.target.value)}></textarea>
-                    {/* <CodeMirror
-                        value={code}
-                        height='80vh'
-                        theme={darcula}
-                        extensions={[python()]}
-                        // onChange={(e) =>{
-                        //   setCode(e.target.value);
-                        // }}
-                        // onBeforeChange={(editor,data,value)=>{
-                        //   setCode(value);
-                        // }}
-                        onBeforeChange={(value)=>{
-                          setCode(value)
-                        }}
-                      /> */}
+                    <textarea className='dartpython' name="python" id="python" value={code} onChange={(e)=>setCode(e.target.value)} placeholder='print("hello codoPlayers")'></textarea>
                     </div>
                     <div className='rightplayground snippet' id='consoleOutput' >
                     <p>{output}</p>
