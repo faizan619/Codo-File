@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext, useReducer } from 'react'
 import Register from './Screens/Register'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Login from './Screens/Login';
@@ -11,25 +11,37 @@ import JavaScript from './Editor/Javascript';
 import Errorpage from './Screens/Errorpage';
 import Homepage from './Screens/Homepage';
 import Header from './Header';
+import Logout from './Screens/Logout';
 
+import { initialState, reducer } from '../reducer/UseReducer';
+
+
+export const UsedContext = createContext();
 function App() {
+
+
+  const [state,dispatch] = useReducer(reducer,initialState)
+
   return (
-    <BrowserRouter>
-    <Header/>
-      <Routes>
-      <Route path='/' element={<Homepage/>}/>      
-      <Route path='/register' element={<Register/>} />
-      <Route path='/login' element={<Login/>}/>      
-      <Route path='/editor/python' element={<Python/>}/>
-      <Route path='/editor/javascript' element={<JavaScript/>}/>
-      <Route path='/editor/html' element={<Html/>}/>
-      <Route path='/editor/css' element={<Html/>}/>
-      <Route path='/editor/java' element={<Java/>}/>
-      <Route path='/editor/voice2text' element={<Voice2Text/>}/>
-      <Route path='/editor/image2text' element={<Image2Text/>}/>
-      <Route path='*' element={<Errorpage/>}/>
-      </Routes>
-    </BrowserRouter>
+    <UsedContext.Provider value={{state,dispatch}}>
+      <BrowserRouter>
+      <Header/>
+        <Routes>
+          <Route path='/' element={<Homepage/>}/>      
+          <Route path='/register' element={<Register/>} />
+          <Route path='/login' element={<Login/>}/>      
+          <Route path='/logout' element={<Logout/>}/>      
+          <Route path='/editor/python' element={<Python/>}/>
+          <Route path='/editor/javascript' element={<JavaScript/>}/>
+          <Route path='/editor/html' element={<Html/>}/>
+          <Route path='/editor/css' element={<Html/>}/>
+          <Route path='/editor/java' element={<Java/>}/>
+          <Route path='/editor/voice2text' element={<Voice2Text/>}/>
+          <Route path='/editor/image2text' element={<Image2Text/>}/>
+          <Route path='*' element={<Errorpage/>}/>
+        </Routes>
+      </BrowserRouter>
+    </UsedContext.Provider>
   )
 }
 
