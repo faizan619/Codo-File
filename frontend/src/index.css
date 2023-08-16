@@ -2,6 +2,8 @@
 
 Global Design Here
 
+https://loading.io/
+
 --> font-family:  sans-serif; 
 https://www.softr.io/tools/svg-wave-generator
 ========================================================*/
@@ -122,7 +124,8 @@ Header Section Designing...
     border: 1px solid white;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    /* position: sticky; */
+    position:fixed;
     width: 100%;
     padding: 1.3rem 1.5rem;
     top: 0%;
@@ -425,6 +428,9 @@ form{
 }
 .registerSVG p span:hover{
     text-decoration: underline;
+}
+.errorlabelinput{
+    color:red;
 }
 /*============================================================
 
@@ -731,13 +737,21 @@ image to text page Design
     width: 50%;
     margin: 1rem  0;
 }
+.image-text-box textarea::placeholder{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.image-text-box textarea{
+    padding: .5rem;
+    height: 90%;
+    color: black;
+    font-size: 1.3rem;
+    width: 100%;
+}
 .image-text-box{
+    width: 75%;
     padding: 1rem;
-    border-radius: 1rem;
-    width: 90%;
-    color: var(--main-color);
-    border-radius: 5px;
-    text-align: center;
+    height: 70%;
 }
 .image-text-box p{
     color: var(--main-color);
@@ -808,8 +822,6 @@ Responsive page Design
         margin-top: 1rem;
         grid-template-columns: 1fr;
     }
-
-
 
     .headerContainer{
         height: 4rem;
