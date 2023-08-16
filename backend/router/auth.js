@@ -58,7 +58,7 @@ router.post('/rundart',async(req,res)=>{
 // registration code here
 router.post('/register',async (req,res)=>{ 
     const {username,email,password,cpassword,role} = req.body;
-    if(!username || !email || !password || !cpassword && role){
+    if(!username || !email || !password || !cpassword && role ){
         return res.status(422).send({Error: "faizan Enter Completed Details for Processing"});
     }
 
@@ -94,7 +94,7 @@ router.post('/login', async (req,res)=>{
         let {username,password} = req.body;
 
         if(!username || !password){
-            return res.status(500).json({Error:"Please fill the data"});
+            return res.status(400).json({Error:"Please fill the data"});
         }
 
         const userLogin = await User.findOne({username:username});
@@ -117,12 +117,13 @@ router.post('/login', async (req,res)=>{
             }
         }
         else{
-            res.status(401).json({error:"Invalid username or Password!"});
+            res.status(400).json({error:"Invalid username or Password!"});
         }
 
         if(userLogin===null){
+            res.status(400).send("please register to login")
             console.log(`Please register to login in codofile`)
-        }
+        } 
         else{
             console.log(`Login Successful - Here is the Completed data`)
             console.log(userLogin);
@@ -131,6 +132,12 @@ router.post('/login', async (req,res)=>{
         console.log(`Admin There is an error : ${err}`);
         res.status(400).json({error:"invalid Credential"});
     }
+})
+
+router.get('/logout',(req,res)=>{
+    console.log("Hello the account is logout");
+    
+    res.status(200).send('User Logout');
 })
 
 module.exports = router
