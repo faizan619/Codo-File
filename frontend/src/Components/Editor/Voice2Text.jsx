@@ -48,7 +48,7 @@ function Voice2Text() {
     const startListening = () => SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
 
   const processTranscript = (transcript) => {
-    console.log('Original transcript:', transcript); // Add this line
+    // console.log('Original transcript:', transcript); // Add this line
     let processedTranscript = transcript;
   
     for (const [phrase, symbol] of Object.entries(phraseToSymbolMap)) {
@@ -56,7 +56,7 @@ function Voice2Text() {
       processedTranscript = processedTranscript.replace(regex, symbol);
     }
   
-    console.log('Processed transcript:', processedTranscript); // Add this line
+    // console.log('Processed transcript:', processedTranscript); // Add this line
     setTextToCopy(processedTranscript);
   };
 
@@ -90,7 +90,7 @@ function Voice2Text() {
                     <div className="voiceTextContainer">
                         <div className="voice2TextOutput" onClick={()=>setTextToCopy(textToCopy)}>
                             {/* <mark><h3 contentEditable>{transcript}</h3></mark> */}
-                            <mark><h3 className='voiceresultclass' contentEditable>{textToCopy}</h3></mark>
+                            <mark><h3 className='voiceresultclass'>{textToCopy}</h3></mark>
                         </div>
                         <div className="btngroup">
                             <button onClick={clearAll}>Clear</button>
