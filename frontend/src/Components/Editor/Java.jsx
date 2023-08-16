@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import LangList from './LangList'
-import voice from '../../assets/image.png'
+// import voice from '../../assets/image.png'
 import axios from 'axios';
 import copy_icon from '../../assets/copy_icon.gif';
 import download_icon from '../../assets/download_logo.png';
@@ -32,6 +32,22 @@ function Java() {
     box.innerHTML = "";
   }
 
+  const copyContent = ()=>{
+    navigator.clipboard.writeText(code);
+  }
+
+  const codeToFile = ()=>{
+    // const text = document.querySelector('.codemirror').value;
+    const text = document.querySelector('#dart').value;
+    // const text = setcode(code);
+    const blob = new Blob([text],{type:"text/dart"});
+
+    const link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    link.download = "codofile-dart.dart";
+    link.click();
+  }
+
   return ( 
     <>
       <div className="voiceContainer">
@@ -45,10 +61,10 @@ function Java() {
                       <mark><h2>index.dart</h2></mark>
                       <div className='runbtn'>
                       <button className='vbtn'>
-                      <img className='voicebtn' src={copy_icon} alt='voice'/>
+                      <img className='voicebtn' onClick={copyContent} src={copy_icon} alt='voice'/>
                       </button>
                       <button className='vbtn'>
-                      <img className='voicebtn' src={download_icon} alt='voice'/>
+                      <img className='voicebtn' onClick={codeToFile} src={download_icon} alt='voice'/>
                       </button>
                         <button className='btn' onClick={handleSubmit}>RUN</button>
                       </div>
@@ -60,7 +76,7 @@ function Java() {
                   </div>
                   <div className='jsplayground playground'>
                     <div className='leftplayground snippet'>
-                      <textarea className='dartpython' name="dart" id="dart" value={code} onChange={(e)=>{setCode(e.target.value)}}></textarea>
+                      <textarea className='dartpython' name="dart" id="dart" value={code} onChange={(e)=>{setCode(e.target.value)}} placeholder='void main(){print("Hello codoPlayers");}'></textarea>
                     </div>
                     <div className='rightplayground snippet'>
                       <p>{output}</p>
