@@ -3,6 +3,7 @@ import LangList from './LangList';
 import photohtml from '../../assets/html.png';
 import photocss from '../../assets/css.png';
 import photojs from '../../assets/js.png';
+import { toast } from 'react-hot-toast';
 
 function Html() {
   const html_code = useRef(null);
@@ -18,6 +19,7 @@ function Html() {
       result.current.contentDocument.body.innerHTML = `<style>${localStorage.css_code}</style>`+localStorage.html_code;
       }
     const jsrun = ()=>{
+      toast.success('Saved');
       localStorage.setItem('js_code', js_code.current.value);
       result.current.contentWindow.eval(localStorage.js_code);
     
@@ -32,6 +34,7 @@ function Html() {
     css_code.current.value = localStorage.css_code;
     js_code.current.value = localStorage.js_code;
   }, []);
+
   
   return (
     <>
