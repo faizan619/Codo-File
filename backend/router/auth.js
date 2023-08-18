@@ -131,7 +131,7 @@ router.post('/login', async (req,res)=>{
         }
     }catch(err){
         console.log(`Admin There is an error : ${err}`);
-        res.status(400).json({error:"invalid Credential"});
+        // res.status(400).json({error:"invalid Credential"});
     }
 })
 
