@@ -124,8 +124,7 @@ Header Section Designing...
     border: 1px solid white;
     justify-content: space-between;
     align-items: center;
-    /* position: sticky; */
-    position:fixed;
+    position: sticky;
     width: 100%;
     padding: 1.3rem 1.5rem;
     top: 0%;
@@ -740,6 +739,10 @@ image to text page Design
 .image-text-box textarea::placeholder{
     font-weight: bold;
     font-size: 1.3rem;
+}
+.imgbtn{
+    width:300px;
+    padding: .4rem;
 }
 .image-text-box textarea{
     padding: .5rem;
