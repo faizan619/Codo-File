@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import Login_svg from '../../assets/Back-to-work-pana.png';
 import blog_svg from '../../assets/blobanimation.svg';
+import { toast } from 'react-hot-toast';
 // import { useFormik } from 'formik';
 // import { registerSchema } from './schema';
 
@@ -43,6 +44,8 @@ function Login() {
 
     if(res.status === 400 || !data){
       window.alert("Invalid Credentials-Check you username and password");
+      toast.error('Please Enter Valid Inputs');
+
     }
     else{
       dispatch({type:'USER',payload:true});

@@ -157,7 +157,7 @@ function Register() {
                                 name="cpassword" 
                                 id="cpassword" 
                                 // autoComplete='off' 
-                                placeholder='123456' 
+                                placeholder='123456'  
                                 value={user.cpassword} 
                                 onChange={handleChange}
                                 // onBlur={handleBlur}
