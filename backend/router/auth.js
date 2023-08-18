@@ -59,17 +59,17 @@ router.post('/rundart',async(req,res)=>{
 router.post('/register',async (req,res)=>{ 
     const {username,email,password,cpassword,role} = req.body;
     if(!username || !email || !password || !cpassword && role ){
-        return res.status(422).send({Error: "faizan Enter Completed Details for Processing"});
+        return res.status(422).send({Error: "Enter Completed Details for Processing"});
     }
 
     try{
         const userExist = await User.findOne({email:email});
 
         if(userExist){
-            return res.status(422).json({Error:"Email already exist"})
+            return res.status(421).json({Error:"Email already exist"})
         }
         else if(password!=cpassword){
-            return res.status(422).json({Error:"Password are not matching"})
+            return res.status(420).json({Error:"Password are not matching"})
         }
         else{
             const user = new User({username,email,password,cpassword,role});
@@ -94,7 +94,7 @@ router.post('/login', async (req,res)=>{
         let {username,password} = req.body;
 
         if(!username || !password){
-            return res.status(400).json({Error:"Please fill the data"});
+            return res.status(403).json({Error:"Please fill the data"});
         }
 
         const userLogin = await User.findOne({username:username});
@@ -110,18 +110,19 @@ router.post('/login', async (req,res)=>{
             });
  
             if(!isMatch){
-                res.status(400).json({error:"Password Wrong"});
+                res.status(402).json({error:"Password Wrong"});
             }
             else{
-                res.json({message:"user login successfully"});
+                res.status(200).json({message:"user login successfully"});
             }
         }
         else{
+            
             res.status(400).json({error:"Invalid username or Password!"});
         }
 
         if(userLogin===null){
-            res.status(400).send("please register to login")
+            res.status(401).send("please register to login")
             console.log(`Please register to login in codofile`)
         } 
         else{
