@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 // import { useFormik } from 'formik';
 // import { registerSchema } from './schema';
 import {useNavigate} from 'react-router-dom'
+import { toast } from 'react-hot-toast'
 
 
 // const initialuser = {
@@ -41,7 +42,7 @@ function Register() {
 
     
 
-    // http://localhost:3000/register
+    // http://localhost:3000/register 
     // {
     //     "username":"faizan",
     //     "email":"user10@gmail.com",
@@ -63,12 +64,20 @@ function Register() {
         const data = await res.json();
 
         if(res.status === 422 || !data){
-            window.alert("Invalid Registration");
+            // window.alert("Invalid Registration");
+            toast.error("Please Fill The Details.");
             console.log("Invalid Registration");
         }
+        else if(res.status === 421){
+            toast.error("Email is Already Registered");
+        }
+        else if(res.status === 420){
+            toast.error('Password is not Matching');
+        }
         else{
-            window.alert("Register Successsful");
-            console.log("Register Successful")
+            // window.alert("Register Successsful");
+            toast.success('Register Successfuly');
+            console.log("Register Successful");
 
             // history1.push("/login",{replace:true});
             history1("/login");
