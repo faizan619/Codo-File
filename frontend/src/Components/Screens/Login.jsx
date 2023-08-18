@@ -41,15 +41,24 @@ function Login() {
     })
 
     const data = res.json();
-
+ 
     if(res.status === 400 || !data){
-      window.alert("Invalid Credentials-Check you username and password");
+      // window.alert("Invalid Credentials-Check you username and password");
       toast.error('Please Enter Valid Inputs');
-
+    }
+    else if(res.status === 401){
+      toast.error("First Register Yourself");
+    }
+    else if(res.status === 402 ){
+      toast.error("Wrong Password.");
+    }
+    else if(res.status === 403){
+      toast.error("Please Fill The Details");
     }
     else{
       dispatch({type:'USER',payload:true});
-      window.alert("Login Successfully");
+      // window.alert("Login Successfully");
+      toast.success("Login Successfully");
       history2('/');
     }
   }
@@ -62,6 +71,14 @@ function Login() {
 //             " ~ File: Register.jsx ~ line 14 ~ Register ~ values ",
 //             values
 //         );
+//         action.resetForm();
+//     },
+// });
+
+//   const {errors,handleBlur,touched,handleSubmit} =  useFormik({
+//     initialValues:[username,password],
+//     validationSchema:registerSchema,
+//     onSubmit:(action)=>{
 //         action.resetForm();
 //     },
 // });
