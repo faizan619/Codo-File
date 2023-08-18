@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import blob from '../../assets/blobanimation.svg'
+import { toast } from 'react-hot-toast';
 
 function Feedback() {
 
@@ -19,6 +20,7 @@ function Feedback() {
 
     //connect with firebase
     const submitData = async(e)=>{
+        toast.loading('Data Processing...')
         e.preventDefault();
         const {name,email,feedback} = userData;
         if(name && email && feedback){
@@ -43,10 +45,14 @@ function Feedback() {
                 setUserData({name:"",email:"",feedback:"",})
             }
             else{
-                alert("Please Fill the Data");
+                // alert("Please Fill the Data");
+                toast.error("Please Fill the Form")
             }
         }
-        else{alert("Please Fill the data")}
+        else{
+            toast.error("Please Fill the Form")
+            // alert("Please Fill the data")
+        }
     };
 
 
