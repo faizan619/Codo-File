@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import LangList from './LangList'
 // import voice from '../../assets/image.png'
 import axios from 'axios';
+import { toast } from 'react-hot-toast';
 import copy_icon from '../../assets/copy_icon.gif';
 import download_icon from '../../assets/download_logo.png';
 
@@ -12,31 +13,39 @@ function Java() {
   const [output,setOutput] = useState('');
 
   const handleSubmit = async ()=>{
+    toast.loading('Please Wait while File is executing')
     const payload = {
       language:"dart",
       code
     };
-
+ 
     try{
       const {data} = await axios.post("http://localhost:5000/rundart",payload)
       setOutput(data.output);
       console.log("Faizan Alam",data);
+      toast.remove();
+      toast.success('Executed Successfully.')
       // setCode("");
     }catch(err){
+      toast.remove();
+      toast.error('Please Enter Valid Dart Code');
       console.log(`error is in dart.js .The error : ${err}`);
     }
   }
 
   const clear = ()=>{
-    const box = document.querySelector(".rightplayground");
+    toast.success('Output Cleared')
+    const box = document.querySelector(".rightplayground p");
     box.innerHTML = "";
   }
 
   const copyContent = ()=>{
+    toast.success('Copied')
     navigator.clipboard.writeText(code);
   }
 
   const codeToFile = ()=>{
+
     // const text = document.querySelector('.codemirror').value;
     const text = document.querySelector('#dart').value;
     // const text = setcode(code);
@@ -45,6 +54,7 @@ function Java() {
     const link = document.createElement("a");
     link.href = window.URL.createObjectURL(blob);
     link.download = "codofile-dart.dart";
+    toast.success('File is Downloading...');
     link.click();
   }
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import LangList from '../Editor/LangList';
 import copy_icon from '../../assets/copy_icon.gif';
 import download_icon from '../../assets/download_logo.png';
+import { toast } from 'react-hot-toast';
 
 const data = new Date()
 let DayName;
@@ -9,7 +10,7 @@ if(data.getDay() === 1){
   DayName =  "Monday";
 }
 else if(data.getDay() === 2){
-  DayName =  "Tuesday";
+  DayName =  "Tuesday"; 
 }
 else if(data.getDay() === 3){
   DayName =  "Wednesday";
@@ -37,10 +38,12 @@ function Javascript() {
 
   const runCode = ()=>{
       try{
+        toast.success("Code Execution Started")
         let textCode = document.querySelector(".dartpython").value;
         eval(textCode);
       }
       catch(err){
+        toast.error("Please Enter Valid Code")
         console.log(`${err}`);
       }
 };
@@ -65,15 +68,19 @@ useEffect(()=>{
   })
 
   const clear = ()=>{
+    toast.success("Output Cleared")
     const box = document.querySelector("#consoleOutput");
     box.innerHTML = "";
   }
 
   const copyContent = ()=>{
     navigator.clipboard.writeText(code);
+    toast.success("Copied to Clipboard")
   }
  
   const codeToFile = ()=>{
+    toast.success("Download Started");
+
     const text = document.querySelector(".dartpython").value;
     const blob = new Blob([text],{type:"text/javascript"});
 

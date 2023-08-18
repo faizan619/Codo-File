@@ -4,6 +4,7 @@ import useClipboard from "react-use-clipboard";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import React, { useState } from 'react';
 import LangList from './LangList';
+import { toast } from 'react-hot-toast';
 // import Header from '../Header';
 
 
@@ -45,7 +46,11 @@ function Voice2Text() {
     'close doublcuote':'"'
   }
 
-    const startListening = () => SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
+    const startListening = () =>{  
+      toast.success("Start Speaking");
+      toast.loading("Listening...",{duration:10})
+      SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
+    } 
 
   const processTranscript = (transcript) => {
     // console.log('Original transcript:', transcript); // Add this line
@@ -76,6 +81,7 @@ function Voice2Text() {
     // tar.innerHTML = ""
     setTextToCopy("");
     resetTranscript();
+    toast.success("Text Cleared")
   }
 
   return (

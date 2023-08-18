@@ -3,6 +3,7 @@ import LangList from './LangList';
 import axios from 'axios';
 import copy_icon from '../../assets/copy_icon.gif';
 import download_icon from '../../assets/download_logo.png';
+import { toast } from 'react-hot-toast';
 
 
 function Python() {
@@ -13,31 +14,41 @@ function Python() {
   const [output,setOutput] = useState('');
 
   const handleSubmit = async ()=>{
+    toast.loading('Please Wait while File is Execuing');
     const payload = {
       language:"py",
       code
     };
 
     try{
+
       const {data} = await axios.post("http://localhost:5000/runpy",payload)
       setOutput(data.output);
       console.log("Faizan Alam",data);
+      toast.remove();
+      toast.remove();
+      toast.success("Executed Successfully.");
       // setCode("");
     }catch(err){
+      toast.remove();
+      toast.error("Please Enter Valid Python Code");
       console.log(`error is in python.js .The error : ${err}`);
     }
   }
 
   const clear = ()=>{
-    const box = document.querySelector("#consoleOutput");
-    box.innerHTML = "";
+    toast.success('Output Cleared')
+    const box = document.querySelector("#consoleOutput p");
+    box.innerText = "";
   }
 
   const copyContent = ()=>{
+    toast.success("Copied")
     navigator.clipboard.writeText(code);
   }
 
   const codeToFile = ()=>{
+    toast.success('File is Downloading...')
     const text = document.querySelector('#python').value;
     
     const blob = new Blob([text],{type:"text/python"});

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import LangList from './LangList'
 import Tesseract from 'tesseract.js';
+import { toast } from "react-hot-toast"
 
 function Image2Text() {
 
@@ -10,10 +11,12 @@ function Image2Text() {
   const [text,setText] = useState("");
 
   const handleChange = (event) => {
+    toast.success('File Added.');
     setImagePath(URL.createObjectURL(event.target.files[0]));
   }
 
   const handleClick = () => {
+    toast.loading("Coverting into Text...")
     setIsLoading(true);
     Tesseract.recognize(
       imagePath,'eng',
@@ -23,6 +26,8 @@ function Image2Text() {
     )
     .catch (err => {
       console.error(err);
+      toast.remove();
+      toast.error("Please Check Internet Connection");
     })
     .then(result => {
       // Get Confidence score
@@ -31,6 +36,8 @@ function Image2Text() {
       let text = result.data.text
       setText(text);
       console.log(confidence,text);
+      toast.remove();
+      toast.success("Image Converted");
       setIsLoading(false)
     })
   }
@@ -48,7 +55,7 @@ function Image2Text() {
                     <img src={imagePath} className='Image-Logo' alt="logo" />
                     <input className='imagefiletype' type="file" onChange={handleChange} />
                     {/* <button onClick={handleClick} className='btn'>Convert To Text</button> */}
-                    <input type="submit" className='btn' onClick={handleClick} value={isLoading? "Loading...":"Convert To Text"} />
+                    <input type="submit" className='btn imgbtn' onClick={handleClick} value={isLoading? "Loading...":"Convert To Text"} />
                     
                     <div className="image-text-box">
                       {/* <p contentEditable>{text}</p> */}
