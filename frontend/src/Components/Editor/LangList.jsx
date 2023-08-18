@@ -15,22 +15,22 @@ function LangList() {
     <div className="LangContainer">
             <div className="langSection languages">
                 <div className="languageBorder">
-                        {/* <NavLink to="/editor/javascript"><img src={js} alt="JLanguage " /></NavLink> */}
-                        <a href="/editor/javascript"><img src={js} alt="JLanguage " /></a>
+                        <NavLink to="/editor/javascript"><img src={js} alt="JLanguage " /></NavLink>
+                        {/* <a href="/editor/javascript"><img src={js} alt="JLanguage " /></a> */}
                 </div>
                 <div className="languageBorder">
                         <NavLink to="/editor/html"><img src={html} alt="Language "  /></NavLink>
                 </div>
                 <div className="languageBorder">
-                        <a href="/editor/python"><img src={python} alt="Language "  /></a>
-                        {/* <NavLink to="/editor/python"><img src={python} alt="Language "  /></NavLink> */}
+                        {/* <a href="/editor/python"><img src={python} alt="Language "  /></a> */}
+                        <NavLink to="/editor/python"><img src={python} alt="Language "  /></NavLink>
                 </div>
                 <div className="languageBorder">
                         <NavLink to="/editor/css"><img src={css} alt="Language "/></NavLink>
                 </div>
                 <div className="languageBorder">
-                        {/* <NavLink to="/editor/java"><img src={java} alt="Language "/></NavLink> */}
-                        <a href="/editor/java"><img src={java} alt="Language "/></a>
+                        <NavLink to="/editor/java"><img src={java} alt="Language "/></NavLink>
+                        {/* <a href="/editor/java"><img src={java} alt="Language "/></a> */}
                 </div>
             </div>
             <div className="FeatureSection languages">
