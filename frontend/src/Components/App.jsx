@@ -12,6 +12,7 @@ import Errorpage from './Screens/Errorpage';
 import Homepage from './Screens/Homepage';
 import Header from './Header';
 import Logout from './Screens/Logout';
+import { Toaster } from 'react-hot-toast';
 
 import { initialState, reducer } from '../reducer/UseReducer';
 
@@ -24,6 +25,18 @@ function App() {
 
   return (
     <UsedContext.Provider value={{state,dispatch}}>
+    <div>
+        <Toaster
+          position='top-center'
+          toastOptions={{
+            success:{
+              theme:{
+                primary:'#4aed88'
+              }
+            }
+          }}
+        />
+      </div>
       <BrowserRouter>
       <Header/>
         <Routes>
