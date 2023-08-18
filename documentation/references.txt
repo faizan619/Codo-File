@@ -40,6 +40,7 @@ Backend:
 
 Database:
 - https://cloud.mongodb.com/v2/64c1040943b2b305a0e61348#/clusters
+- https://1drv.ms/w/s!An6UaBERXeivg7UHi_BsZ8BbOy-DQw?e=oHyc8T
 
 Testing:
 
