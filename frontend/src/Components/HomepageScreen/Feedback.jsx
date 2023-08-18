@@ -20,7 +20,7 @@ function Feedback() {
 
     //connect with firebase
     const submitData = async(e)=>{
-        toast.loading('Data Processing...')
+        // toast.loading('Data Processing...')
         e.preventDefault();
         const {name,email,feedback} = userData;
         if(name && email && feedback){
@@ -41,11 +41,13 @@ function Feedback() {
         );
         
             if(res){
+                toast.remove();
                 alert("Data Stored Successfully");
                 setUserData({name:"",email:"",feedback:"",})
             }
             else{
                 // alert("Please Fill the Data");
+                // toast.remove();
                 toast.error("Please Fill the Form")
             }
         }
