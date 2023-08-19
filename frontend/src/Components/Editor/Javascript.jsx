@@ -97,7 +97,7 @@ useEffect(()=>{
       <div className="jsContainer"> 
             <div className="jsBody">
                 <div className="leftLang">
-                    <LangList/>
+                    <LangList leftcolorjs="white"/>
                 </div>
                 <div className="PlaygroundMain">
                   <div className='runHeaderJS'>

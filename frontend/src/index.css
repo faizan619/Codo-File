@@ -362,6 +362,12 @@ Language Side Navbar Section Designing...
 .FeatureSection{
     background-color: var(--second-background-color);
 }
+/* .leftcolor{
+    border: 1px solid red;
+} */
+/* .jsleft{
+    background-color: white;
+} */
 
 /*============================================================
 
@@ -838,6 +844,10 @@ Responsive page Design
         margin-left: .2rem;
     }
     .btn{
+        padding: 15px 20px;
+        /* font-size: 1rem; */
+    }
+    .Headerbtn{
         padding: 5px 1px;
         font-size: .8rem;
     }
@@ -846,7 +856,7 @@ Responsive page Design
         flex-direction: column-reverse;
     }
     .container{
-        height: 130vh;
+        height: 120vh;
     }
     .title{
         font-size: 1.7rem;
@@ -854,6 +864,10 @@ Responsive page Design
     .codingSection{
         padding-top: 1rem;
         display: flex;
+        flex-direction: column-reverse;
+    }
+    #uni{
+        /* border: 1px solid red; */
         flex-direction: column-reverse;
     }
     .codingimage img{
@@ -915,7 +929,7 @@ Responsive page Design
         height: 4rem;
     }
     .container{
-        height: 130vh;
+        height: 100vh;
     }
     .title{
         font-size: 2rem;
@@ -925,15 +939,28 @@ Responsive page Design
         display: flex;
         flex-direction: column-reverse;
     }
+    
+    .codingInfo{
+        display: flex;
+        align-items: center;
+    }
+    #uni{
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+    .btn{
+        padding: 15px 30px;
+    }
+    .Headerbtn{
+        padding: 10px;
+    }
     .codingimage img{
         width: 20rem;
     }
     .infoCoding{
         font-size: 1.7rem;
     }
-    .btn{
-        padding: 5px 10px;
-    }
+    
     .feedSection{
         display: flex;
         text-align: center;

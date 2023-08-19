@@ -47,10 +47,10 @@ function Image2Text() {
       <div className="voiceContainer">
             <div className="voiceBody">
                 <div className="leftLang">
-                    <LangList/>
+                    <LangList leftcolori="white"/>
                 </div>
                 <div className="voicePlayground">
-                <mark><h1>Image to Text Converter</h1></mark><br />
+                <mark><h1>Image to Text Converter</h1></mark><br/>
                   <main className='imageMain'>
                     <img src={imagePath} className='Image-Logo' alt="logo" />
                     <input className='imagefiletype' type="file" onChange={handleChange} />

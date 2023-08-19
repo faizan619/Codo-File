@@ -89,7 +89,7 @@ function Voice2Text() {
         <div className="voiceContainer">
             <div className="voiceBody">
                 <div className="leftLang">
-                    <LangList/>
+                    <LangList leftcolorv="white"/>
                 </div>
                 <div className="voicePlayground">
                     <h1 className="title">Voice to Text Converter</h1>

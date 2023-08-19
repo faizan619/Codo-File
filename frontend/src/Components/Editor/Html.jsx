@@ -41,7 +41,7 @@ function Html() {
       <div className="voiceContainer">
         <div className="voiceBody">
           <div className="leftLang">
-            <LangList/>
+            <LangList leftcolorhtml="white" />
           </div>
           <div className="voicePlayground">
             <div className="htmlcodeEditor">

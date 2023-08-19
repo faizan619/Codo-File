@@ -63,7 +63,7 @@ function Java() {
       <div className="voiceContainer">
             <div className="voiceBody">
                 <div className="leftLang">
-                    <LangList/>
+                    <LangList leftcolordart="white"/>
                 </div>
                 <div className="PlaygroundMain">
                 <div className='runHeaderJS'>

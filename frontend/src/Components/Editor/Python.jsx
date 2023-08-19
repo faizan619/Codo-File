@@ -65,7 +65,7 @@ function Python() {
       <div className="voiceContainer">
             <div className="voiceBody">
                 <div className="leftLang">
-                    <LangList/>
+                    <LangList leftcolorpy="white"/>
                 </div>
                 <div className="PlaygroundMain">
                 <div className='runHeaderJS'>
