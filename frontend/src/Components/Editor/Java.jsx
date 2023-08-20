@@ -61,7 +61,7 @@ function Java() {
   return ( 
     <>
       <div className="voiceContainer">
-            <div className="voiceBody">
+            <div className="voiceBody wholeeditorBody">
                 <div className="leftLang">
                     <LangList leftcolordart="white"/>
                 </div>

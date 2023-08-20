@@ -45,7 +45,7 @@ function Image2Text() {
   return (
     <>
       <div className="voiceContainer">
-            <div className="voiceBody">
+            <div className="voiceBody wholeeditorBody">
                 <div className="leftLang">
                     <LangList leftcolori="white"/>
                 </div>

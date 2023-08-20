@@ -39,7 +39,7 @@ function Html() {
   return (
     <>
       <div className="voiceContainer">
-        <div className="voiceBody">
+        <div className="voiceBody wholeeditorBody">
           <div className="leftLang">
             <LangList leftcolorhtml="white" />
           </div>

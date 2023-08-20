@@ -87,7 +87,7 @@ function Voice2Text() {
   return (
     <>
         <div className="voiceContainer">
-            <div className="voiceBody">
+            <div className="voiceBody wholeeditorBody">
                 <div className="leftLang">
                     <LangList leftcolorv="white"/>
                 </div>

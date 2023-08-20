@@ -95,7 +95,7 @@ useEffect(()=>{
   return (
     <>
       <div className="jsContainer"> 
-            <div className="jsBody">
+            <div className="jsBody wholeeditorBody">
                 <div className="leftLang">
                     <LangList leftcolorjs="white"/>
                 </div>

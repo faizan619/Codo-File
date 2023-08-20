@@ -69,7 +69,7 @@ function Python() {
   return (
     <> 
       <div className="voiceContainer">
-            <div className="voiceBody">
+            <div className="voiceBody wholeeditorBody">
                 <div className="leftLang">
                     <LangList leftcolorpy="white"/>
                 </div>
