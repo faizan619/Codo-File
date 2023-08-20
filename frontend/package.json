@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@uiw/codemirror-extensions-basic-setup": "^4.21.9",
     "@uiw/codemirror-extensions-classname": "^4.21.9",
@@ -54,6 +52,9 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.22.9",
-    "@babel/runtime": "^7.22.6"
+    "@babel/runtime": "^7.22.6",
+    "@testing-library/dom": "^9.3.1",
+    "@testing-library/jest-dom": "^6.0.1",
+    "@testing-library/react": "^14.0.0"
   }
 }
