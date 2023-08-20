@@ -105,10 +105,10 @@ useEffect(()=>{
                       <mark><h2>index.js</h2></mark>
                       <div className='runbtn'>
                       <button className='vbtn'>
-                      <img className='voicebtn' onClick={copyContent} src={copy_icon} alt='voice'/>
+                      <img className='voicebtn' onClick={copyContent} src={copy_icon} alt='CopyClip'/>
                       </button>
                       <button className='vbtn'>
-                      <img className='voicebtn' onClick={codeToFile} src={download_icon} alt='voice'/>
+                      <img className='voicebtn' onClick={codeToFile} src={download_icon} alt='DownLoadCode'/>
                       </button>
                         <button className='btn btn1' onClick={runCode}>RUN</button>
                       </div>
@@ -120,9 +120,9 @@ useEffect(()=>{
                   </div>
                   <div className='jsplayground playground'>
                     <div className='leftplayground snippet'>
-                      <textarea className='dartpython' name="javascript" id="javascript" value={code} onChange={(e)=>setcode(e.target.value)} placeholder='console.log("Hello CodoPlayer");'></textarea>
+                      <textarea className='dartpython' data-testid="jsTextarea" name="javascript" id="javascript" value={code} onChange={(e)=>setcode(e.target.value)} placeholder='console.log("Hello CodoPlayer");'></textarea>
                     </div>
-                    <div className='rightplayground snippet' id='consoleOutput' >
+                    <div className='rightplayground snippet' id='consoleOutput' data-testid="consoleOutput" >
                     </div>
                   </div>
                 </div>

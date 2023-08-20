@@ -48,18 +48,18 @@ function Html() {
               <div className="editormain">
                 <div className="html-code">
                   <h1 className='webeditorheading'><img src={photohtml} alt="H"/> HTML</h1>
-                  <textarea ref={html_code}></textarea>
+                  <textarea data-testid="htmlTextarea" ref={html_code}></textarea>
                 </div>
                 <div className="css-code">
                   <h1 className='webeditorheading'><img src={photocss} alt="H"/>CSS</h1>
-                  <textarea ref={css_code}></textarea>
+                  <textarea data-testid="cssTextarea" ref={css_code}></textarea>
                 </div>
                 <div className="js-code">
-                  <h1 className='webeditorheading'><img src={photojs} alt="H"/>JavaScript <button ref={run_button} className='jsrunbtn'>RUN</button> </h1>
+                  <h1 className='webeditorheading'><img src={photojs} alt="H"/>JavaScript <button data-testid="runButton" ref={run_button} className='jsrunbtn'>RUN</button> </h1>
                   <textarea spellCheck='false' ref={js_code}></textarea>
                 </div>
               </div>
-              <iframe title='result' id='result' ref={result}></iframe>
+              <iframe title='result' data-testid="result" id='result' ref={result}></iframe>
             </div>
           </div>
         </div>

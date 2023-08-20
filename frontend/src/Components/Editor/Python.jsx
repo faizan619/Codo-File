@@ -1,14 +1,12 @@
 import React,{ useState } from 'react';
 import LangList from './LangList';
-import axios from 'axios';
+// import axios from 'axios';
 import copy_icon from '../../assets/copy_icon.gif';
 import download_icon from '../../assets/download_logo.png';
 import { toast } from 'react-hot-toast';
 
 
 function Python() {
-
-  
 
   const [code,setCode] = useState('');
   const [output,setOutput] = useState('');
@@ -22,7 +20,15 @@ function Python() {
 
     try{
 
-      const {data} = await axios.post("http://localhost:5000/runpy",payload)
+      // const {data} = await axios.post("http://localhost:5000/runpy",payload)
+      const response = await fetch("http://localhost:5000/runpy",{
+        method:'POST',
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify(payload)
+      })
+      const data = await response.json()
       setOutput(data.output);
       console.log("Faizan Alam",data);
       toast.remove();
