@@ -48,7 +48,7 @@ html{
     top: 0;
 }
 .blob3{
-    right: 0;
+    right: 10px;
     height: 25rem;
 }
 .title{
@@ -808,6 +808,45 @@ Responsive page Design
 @media (min-width:250px) and (max-width:480px) {
     /* Mobile View */
 
+    .LangContainer{
+        margin: .5rem 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: 4rem; 
+    }
+    .langSection{
+        width: 75vw;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+        height: 4rem;
+    }
+    .languages{
+        border: none;
+    }
+    .FeatureSection{
+        flex-wrap: wrap;
+        width: 30vw;
+        background-color: var(--background-color);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        height: 4rem;
+    }
+    .wholeeditorBody{
+        display: flex;    
+        flex-direction: column;
+    }
+    
+    /* .voiceBody{
+        height: 110vh;
+        display: grid;
+        grid-template-columns: 0 1fr;
+    }
+    */
+
     .registerMainComponent{
         height: 100%;
     }
@@ -902,6 +941,80 @@ Responsive page Design
     /* Extra Small Devices */
     
     /* feedback form alignment is showing problem */
+
+    
+    .LangContainer{
+        margin: .5rem 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: 4rem; 
+    }
+    .langSection{
+        width: 75vw;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+        height: 4rem;
+    }
+    .languages{
+        border: none;
+    }
+    .FeatureSection{
+        flex-wrap: wrap;
+        width: 30vw;
+        background-color: var(--background-color);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        height: 4rem;
+    }
+    .wholeeditorBody{
+        display: flex;    
+        flex-direction: column;
+    }
+    
+    /* .runHeaderJS{
+        display: flex;
+        flex-direction: column;
+    }
+    .runbtn{
+        width: 100% ;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1rem 0;
+    }
+    .jsleftheaderfile{
+        display: flex;
+        flex-direction: column;
+    }
+    .snippet{
+        width: 100%;
+        border: 0;
+    }
+    .snippet1{
+        border: 1px solid white;
+    }
+    .clear{
+        margin: 1rem 0;
+        width: fit-content;
+    }
+    .jsrightheaderfile{
+        border: 1px solid yellow;
+        display: grid;
+        width: 100%;
+    }
+    .rightplayground{
+        width: 90vw;
+        border-radius: 1rem;
+        color: white;
+    } */
+    /* .voiceBody{
+        height: 110vh;
+        display: grid;
+        grid-template-columns: 0 1fr;
+    }*/
 
     .registerMainComponent{
         height: 100%;
