@@ -22,15 +22,15 @@ function LangList(props) {
                         <NavLink to="/editor/html"><img className={props.html} src={html} alt="Language " /></NavLink>
                 </div>
                 <div className="languageBorder" style={{'backgroundColor':`${props.leftcolorpy}`}}>
-                        <a href="/editor/python"><img className={props.py} src={python} alt="Language "  /></a>
-                        {/* <NavLink to="/editor/python"><img src={python} alt="Language "  /></NavLink> */}
+                        {/* <a href="/editor/python"><img className={props.py} src={python} alt="Language "  /></a> */}
+                        <NavLink to="/editor/python"><img className={props.py} src={python} alt="Language "  /></NavLink>
                 </div>
                 <div className="languageBorder" style={{'backgroundColor':`${props.leftcolorhtml}`}}>
                         <NavLink to="/editor/css"><img className={props.html} src={css} alt="Language "/></NavLink>
                 </div>
                 <div className="languageBorder" style={{'backgroundColor':`${props.leftcolordart}`}}>
-                        {/* <NavLink to="/editor/java"><img className={props.dart} src={java} alt="Language "/></NavLink> */}
-                        <a href="/editor/java"><img className={props.dart} src={java} alt="Language "/></a>
+                        <NavLink to="/editor/java"><img className={props.dart} src={java} alt="Language "/></NavLink>
+                        {/* <a href="/editor/java"><img className={props.dart} src={java} alt="Language "/></a> */}
                 </div>
             </div>
             <div className="FeatureSection languages">
