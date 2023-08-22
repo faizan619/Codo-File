@@ -52,6 +52,25 @@ function Javascript() {
 
 const originalConsoleLog = console.log;
 
+/*
+useEffect(() => {
+  const btn = document.querySelector('.btn1');
+  btn.addEventListener('click', () => {
+    const consoleOutput = document.getElementById('consoleOutput');
+    consoleOutput.innerText = "";
+  });
+
+  return () => {
+    // Clean up the event listener when the component unmounts
+    btn.removeEventListener('click', () => {
+      const consoleOutput = document.getElementById('consoleOutput');
+      consoleOutput.innerText = "";
+    });
+  };
+}, []); // Empty dependency array ensures the effect runs only once on mount
+
+*/
+
 useEffect(()=>{
   console.log = function(message){
     const consoleOutput = document.getElementById('consoleOutput');
