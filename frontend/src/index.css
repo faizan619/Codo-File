@@ -741,6 +741,7 @@ image to text page Design
     max-width: 90%;
     width: 50%;
     margin: 1rem  0;
+    height: 3rem;
 }
 .image-text-box textarea::placeholder{
     font-weight: bold;
@@ -748,7 +749,7 @@ image to text page Design
 }
 .imgbtn{
     width:300px;
-    padding: .4rem;
+    height: 3rem;
 }
 .image-text-box textarea{
     padding: .5rem;
@@ -772,7 +773,11 @@ image to text page Design
     border-radius: .5rem;
     overflow: hidden;
 }
-
+.btnbtn{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 3rem;
+}
 
 /*========================================================
     
