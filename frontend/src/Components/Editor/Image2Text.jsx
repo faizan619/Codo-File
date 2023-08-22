@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import LangList from './LangList'
 import Tesseract from 'tesseract.js';
 import { toast } from "react-hot-toast"
+import copy_icon from '../../assets/copy_icon.gif'
 
 function Image2Text() {
 
@@ -42,6 +43,18 @@ function Image2Text() {
     })
   }
 
+  const copyContent = ()=>{
+    navigator.clipboard.writeText(text);
+    toast.success("Copied to Clipboard")
+  }
+ 
+  const clear = ()=>{
+    toast.success("Output Cleared")
+    const box = document.querySelector("#vtext");
+    box.value = "";
+  }
+
+
   return (
     <>
       <div className="voiceContainer">
@@ -55,7 +68,11 @@ function Image2Text() {
                     <img src={imagePath} className='Image-Logo' alt="logo" />
                     <input className='imagefiletype' type="file" onChange={handleChange} />
                     {/* <button onClick={handleClick} className='btn'>Convert To Text</button> */}
+                    <div className="imagebutton">
+                    <button className='btn btnbtn' onClick={copyContent}>Copy</button> 
                     <input type="submit" className='btn imgbtn' onClick={handleClick} value={isLoading? "Loading...":"Convert To Text"} />
+                    <button className='btn btnbtn' onClick={clear}>Clear</button>
+                    </div>
                     
                     <div className="image-text-box">
                       {/* <p contentEditable>{text}</p> */}
