@@ -32,7 +32,16 @@ router.post('/runpy',async(req,res)=>{
         return res.json({filepath,output});
     }
     catch(err){
-        res.status(500).json({error:"Syntax Error: Please Check Your Code"});
+        // res.status(500).json({error:"Syntax Error: Please Check Your Code"});
+        // res.status(500).json({error:`${err}`});
+
+        const errorMessage = err.toString();
+        const errorPattern =  /line \d+\s+([^\n]+)/;
+        const match = errorMessage.match(errorPattern);
+        const realError = match ? match[0].trim() : "Unknown error occurred";
+        
+        res.status(500).json({ error: `Error: ${realError}` });
+
     }
 })
 // ################## dart compiler code here ##################
@@ -50,7 +59,16 @@ router.post('/rundart',async(req,res)=>{
         return res.json({filepath,output});
     }
     catch(err){
-        res.status(500).json({error:"faizan Something went wrong"});
+        // res.status(500).json({error:`${err}`});        
+
+        const errorPattern =  / Error: ([^\n]+)\n([^\n]+)/;
+        // const errorPattern =  / Error: ([^\n]+)/;
+        const errorMessage = err.toString();
+        const match = errorMessage.match(errorPattern);
+        const realError = match ? match[0].trim() : "Unknown error occurred";
+        
+        res.status(500).json({ error: `Error: ${realError}` });
+
     }
 })
 
