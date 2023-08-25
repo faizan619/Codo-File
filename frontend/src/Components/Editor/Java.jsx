@@ -46,6 +46,7 @@ function Java() {
     }catch(err){
       toast.remove();
       toast.error('Error in communication with the server.Please check is flutter sdk is installed');
+      setOutput("Error in communication with the server");
       console.log(`error is in dart.js .The error : ${err}`);
     }
   }
