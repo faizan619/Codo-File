@@ -29,14 +29,23 @@ function Python() {
         body:JSON.stringify(payload)
       })
       const data = await response.json()
-      setOutput(data.output);
-      console.log("Faizan Alam",data);
-      toast.remove();
-      toast.remove();
-      toast.success("Executed Successfully.");
+      if(response.ok){
+        toast.remove();
+        setOutput(data.output);
+        toast.success("Executed Successfully.");
+      }
+      else{
+        setOutput(data.error);
+        toast.remove();
+        toast.error("An error Occured.");
+      }
+      // console.log("Faizan Alam",data);
+      // toast.remove();
+      // toast.remove();
       // setCode("");
     }catch(err){
       toast.remove();
+      setOutput("Error in communication with the server")
       toast.error("Please Enter Valid Python Code");
       console.log(`error is in python.js .The error : ${err}`);
     }
