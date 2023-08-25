@@ -20,15 +20,32 @@ function Java() {
     };
  
     try{
-      const {data} = await axios.post("http://localhost:5000/rundart",payload)
-      setOutput(data.output);
-      console.log("Faizan Alam",data);
-      toast.remove();
-      toast.success('Executed Successfully.')
+      // const {data} = await axios.post("http://localhost:5000/rundart",payload)
+      const response = await fetch("http://localhost:5000/rundart",{
+        method:'POST',
+        headers:{
+          "Content-Type":"application/json"
+          },  
+          body : JSON.stringify(payload),
+      })
+      const data = await response.json()
+      if(response.ok){
+        toast.remove();
+        setOutput(data.output);
+        toast.success("Executed  Successfully")
+      }
+      else{
+        setOutput(data.error);
+        toast.remove();
+        toast.error("An Error Occured");
+      }
+      // console.log("Faizan Alam",data);
+      // toast.remove();
+      // toast.success('Executed Successfully.')
       // setCode("");
     }catch(err){
       toast.remove();
-      toast.error('Please Enter Valid Dart Code');
+      toast.error('Error in communication with the server.Please check is flutter sdk is installed');
       console.log(`error is in dart.js .The error : ${err}`);
     }
   }
