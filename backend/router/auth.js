@@ -32,7 +32,7 @@ router.post('/runpy',async(req,res)=>{
         return res.json({filepath,output});
     }
     catch(err){
-        res.status(500).json({error:"faizan Something went wrong"});
+        res.status(500).json({error:"Syntax Error: Please Check Your Code"});
     }
 })
 // ################## dart compiler code here ##################
