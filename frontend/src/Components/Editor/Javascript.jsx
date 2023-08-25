@@ -52,39 +52,45 @@ function Javascript() {
 
 const originalConsoleLog = console.log;
 
-/*
-useEffect(() => {
+useEffect(()=>{
+  const consoleOutput = document.getElementById('consoleOutput');
   const btn = document.querySelector('.btn1');
-  btn.addEventListener('click', () => {
-    const consoleOutput = document.getElementById('consoleOutput');
-    consoleOutput.innerText = "";
+
+  const consoleLoghandler = function(message){
+    const paragraph = document.createElement('p');
+    paragraph.textContent = message;
+    consoleOutput.appendChild(paragraph);
+    originalConsoleLog.apply(console);
+  };
+
+  btn.addEventListener('click',()=>{
+    consoleOutput.innerHTML = "";
   });
 
-  return () => {
-    // Clean up the event listener when the component unmounts
-    btn.removeEventListener('click', () => {
-      const consoleOutput = document.getElementById('consoleOutput');
-      consoleOutput.innerText = "";
+  console.log = consoleLoghandler;
+
+  return ()=>{
+    btn.removeEventListener('click',()=>{
+      consoleOutput.innerHTML = "";
     });
+    console.log = originalConsoleLog;
   };
-}, []); // Empty dependency array ensures the effect runs only once on mount
+},[]);
 
-*/
-
-useEffect(()=>{
-  console.log = function(message){
-    const consoleOutput = document.getElementById('consoleOutput');
-      const btn = document.querySelector('.btn1');
-      btn.addEventListener('click',()=>{
-        consoleOutput.innerText = "";
-      })
-      const paragraph = document.createElement('p');
-      paragraph.textContent = message;
-      consoleOutput.appendChild(paragraph);
-      // originalConsoleLog.apply(console,arguments);
-      originalConsoleLog.apply(console);
-    };
-  })
+// useEffect(()=>{
+//   console.log = function(message){
+//     const consoleOutput = document.getElementById('consoleOutput');
+//       const btn = document.querySelector('.btn1');
+//       btn.addEventListener('click',()=>{
+//         consoleOutput.innerText = "";
+//       })
+//       const paragraph = document.createElement('p');
+//       paragraph.textContent = message;
+//       consoleOutput.appendChild(paragraph);
+//       // originalConsoleLog.apply(cons5ole,arguments);
+//       originalConsoleLog.apply(console);
+//     };
+//   })
 
   const clear = ()=>{
     toast.success("Output Cleared")
@@ -129,6 +135,7 @@ useEffect(()=>{
                       <button className='vbtn'>
                       <img className='voicebtn' onClick={codeToFile} src={download_icon} alt='DownLoadCode'/>
                       </button>
+                        {/* <button className='btn btn1' onClick={handleSubmit}>RUN</button> */}
                         <button className='btn btn1' onClick={runCode}>RUN</button>
                       </div>
                     </div>
@@ -142,6 +149,7 @@ useEffect(()=>{
                       <textarea className='dartpython' data-testid="jsTextarea" name="javascript" id="javascript" value={code} onChange={(e)=>setcode(e.target.value)} placeholder='console.log("Hello CodoPlayer");'></textarea>
                     </div>
                     <div className='rightplayground snippet' id='consoleOutput' data-testid="consoleOutput" >
+                    {/* <p>{output}</p> */}
                     </div>
                   </div>
                 </div>
