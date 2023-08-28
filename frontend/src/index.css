@@ -51,6 +51,9 @@ html{
     right: 10px;
     height: 25rem;
 }
+.invisible{
+    display:none;
+}
 .title{
     text-align: center;
     font-size: 3.5rem;
@@ -820,31 +823,111 @@ Responsive page Design
         flex-direction: row;
         height: 4rem; 
     }
-    .langSection{
-        width: 75vw;
+    .languages{
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        align-items: flex-start;
-        height: 4rem;
-    }
-    .languages{
+        align-items: center;
+        flex-wrap: wrap;
         border: none;
     }
+    .langSection{
+        width: 75vw;
+        /* height: 4rem; */
+    }
     .FeatureSection{
-        flex-wrap: wrap;
+        
         width: 30vw;
         background-color: var(--background-color);
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
+        /* display: flex; */
+        /* flex-direction: row; */
+        /* align-items: flex-start; */
         height: 4rem;
     }
     .wholeeditorBody{
         display: flex;    
         flex-direction: column;
     }
+    /* edutor responsive part here */
+    /* .runrun{
+        padding: .5rem;
+    } */
+    .htmlcodeEditor{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 200vh;
+        /* align-items: center; */
+    }
+    .imagefiletype{
+        height: 5rem;
+    }
+    .btngroup button{padding: 7px;}
+    .btngroup{
+        display: flex;
+        gap: .5rem;
+        /* overflow: auto; */
+    }
+    .imagebutton{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        flex-direction: column;
+        padding: 1rem ;
+    }
+    .imgbtn{
+        width: 150%;
+    }
+    .btnbtn{
+        width: 50%;
+    }
+    .voicePlayground mark h1{
+        text-align: center;
+    }
+    .codemaincode{
+        height: 30vh;
+    }
+    #result{
+        height: 85vh;
+    }
     
+
+
+
+    .languageBorder{
+        height: 2.5rem;
+        width: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .languageBorder img{
+        height: 2rem;
+    }
+    .playground{
+        margin-top: .5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .jsleftheaderfile mark h2{
+        font-size: 1rem;
+    }
+    .jsleftheaderfile{
+        width: 100vw;
+    }
+    .jsrightheaderfile{
+        display: none;
+    }
+    .invisible{
+        display: block;
+    }
+    .snippet{
+        border: 0;
+        height: 80vh;
+    }
+    .dartpython{
+        height: 99%;
+    }
     /* .voiceBody{
         height: 110vh;
         display: grid;
@@ -888,11 +971,11 @@ Responsive page Design
         margin-left: .2rem;
     }
     .btn{
-        padding: 15px 20px;
+        padding: 7px;
         /* font-size: 1rem; */
     }
     .Headerbtn{
-        padding: 5px 1px;
+        padding: 7px;
         font-size: .8rem;
     }
     .codingSection{
@@ -935,7 +1018,7 @@ Responsive page Design
         font-weight: bold;
     }
     .wave{
-        height: 10rem;
+        height: 15rem;
     }
     .wave p{
         font-size: .8rem;
@@ -979,7 +1062,9 @@ Responsive page Design
         display: flex;    
         flex-direction: column;
     }
-    
+    .playground{
+        margin-top:.5rem;
+    }
     /* .runHeaderJS{
         display: flex;
         flex-direction: column;
@@ -1091,7 +1176,7 @@ Responsive page Design
         font-weight: bold;
     }
     .wave{
-        height: 10rem;
+        height: 15rem;
     }
     .wave p{
         font-size: 1rem;
