@@ -60,7 +60,7 @@
   ![JavaScriptEditorPage](./documentation/Project%20Assets/JavascriptEditorPage.PNG)
 
   ### 3. Python Editor Page
-  ![PythonEditorpage](./documentation/Project%20Assets/pythoneditorpage.PNG)
+  ![PythonEditorpage](./documentation/Project%20Assets/PythonEditorPage.PNG)
 
   ### 4. Dart Editor Page
   ![DartEditorPage](./documentation/Project%20Assets/DartPage.PNG)
@@ -89,10 +89,10 @@
 
 ## Contact Information
 
-### 1. [Github](https://github.com/faizan619)
-### 2. [Linkedin](https://www.linkedin.com/in/faizan-alam-/)
-### 3. [Gmail](alamf6023@gmail.com)
-### 4. [Instagram](https://www.instagram.com/faizan_alam_._/)
+ ###  ![Instagram](./documentation/Project%20Assets/icons8-instagram-20.png) [Github](https://github.com/faizan619)  
+ ###  ![Linkedin](./documentation/Project%20Assets/icons8-linkedin-20.png) [Linkedin](https://www.linkedin.com/in/faizan-alam-/)
+### ![Gmail](./documentation/Project%20Assets/icons8-gmail-20.png)  [Gmail](alamf6023@gmail.com)
+### ![instagram](./documentation/Project%20Assets/icons8-instagram-20.png)  [Instagram](https://www.instagram.com/faizan_alam_._/)
 
 
 ### Copyright (C) 2023-2024 **Faizan alam** , *alamf6023@gmail.com*.
