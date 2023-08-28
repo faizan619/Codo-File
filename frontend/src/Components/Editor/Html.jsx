@@ -43,22 +43,24 @@ function Html() {
           <div className="leftLang">
             <LangList leftcolorhtml="white" />
           </div>
+          <h1 className="invisible"><mark>Web Editor</mark></h1>
           <div className="voicePlayground">
             <div className="htmlcodeEditor">
               <div className="editormain">
-                <div className="html-code">
+                <div className="html-code codemaincode">
                   <h1 className='webeditorheading'><img src={photohtml} alt="H"/> HTML</h1>
                   <textarea data-testid="htmlTextarea" ref={html_code}></textarea>
                 </div>
-                <div className="css-code">
+                <div className="css-code codemaincode">
                   <h1 className='webeditorheading'><img src={photocss} alt="H"/>CSS</h1>
                   <textarea data-testid="cssTextarea" ref={css_code}></textarea>
                 </div>
-                <div className="js-code">
+                <div className="js-code codemaincode">
                   <h1 className='webeditorheading'><img src={photojs} alt="H"/>JavaScript <button data-testid="runButton" ref={run_button} className='jsrunbtn'>RUN</button> </h1>
                   <textarea spellCheck='false' ref={js_code}></textarea>
                 </div>
               </div>
+              <h1 className="invisible"><mark>Output</mark></h1>
               <iframe title='result' data-testid="result" id='result' ref={result}></iframe>
             </div>
           </div>

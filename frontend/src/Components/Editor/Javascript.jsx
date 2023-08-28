@@ -148,6 +148,9 @@ useEffect(()=>{
                     <div className='leftplayground snippet'>
                       <textarea className='dartpython' data-testid="jsTextarea" name="javascript" id="javascript" value={code} onChange={(e)=>setcode(e.target.value)} placeholder='console.log("Hello CodoPlayer");'></textarea>
                     </div>
+                    <h1 className="invisible">
+                      <mark>Output</mark>
+                    </h1>
                     <div className='rightplayground snippet' id='consoleOutput' data-testid="consoleOutput" >
                     {/* <p>{output}</p> */}
                     </div>

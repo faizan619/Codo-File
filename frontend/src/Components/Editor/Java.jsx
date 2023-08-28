@@ -106,6 +106,9 @@ function Java() {
                     <div className='leftplayground snippet'>
                       <textarea className='dartpython' name="dart" id="dart" value={code} onChange={(e)=>{setCode(e.target.value)}} placeholder='void main(){print("Hello codoPlayers");}'></textarea>
                     </div>
+                    <h1 className="invisible">
+                      <mark>Output</mark>
+                    </h1>
                     <div className='rightplayground snippet'>
                       <p>{output}</p>
                     </div>

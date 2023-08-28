@@ -105,6 +105,9 @@ function Python() {
                     <div className='leftplayground snippet'>
                     <textarea className='dartpython' name="python" id="python" value={code} onChange={(e)=>setCode(e.target.value)} placeholder='print("hello codoPlayers")'></textarea>
                     </div>
+                    <h1 className="invisible">
+                      <mark>Output</mark>
+                    </h1>
                     <div className='rightplayground snippet' id='consoleOutput' >
                     <p>{output}</p>
                     </div>

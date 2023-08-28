@@ -99,10 +99,10 @@ function Voice2Text() {
                             <mark><h3 className='voiceresultclass'>{textToCopy}</h3></mark>
                         </div>
                         <div className="btngroup">
-                            <button onClick={clearAll}>Clear</button>
+                            <button onClick={startListening}>Start</button>
+                            <button onClick={SpeechRecognition.stopListening}>Stop</button>
                             <button onClick={setCopied}>{isCopied ? "Copied" : "Copy"}</button>
-                            <button onClick={startListening}>Start Listening</button>
-                            <button onClick={SpeechRecognition.stopListening}>Stop Listening</button>
+                            <button onClick={clearAll}>Clear</button>
                         </div>
                     </div>
                 </div>
