@@ -89,7 +89,7 @@
 
 ## Contact Information
 
- ###  ![Instagram](./documentation/Project%20Assets/icons8-instagram-20.png) [Github](https://github.com/faizan619)  
+ ###  ![Instagram](./documentation/Project%20Assets/icons8-github-20.png) [Github](https://github.com/faizan619)  
  ###  ![Linkedin](./documentation/Project%20Assets/icons8-linkedin-20.png) [Linkedin](https://www.linkedin.com/in/faizan-alam-/)
 ### ![Gmail](./documentation/Project%20Assets/icons8-gmail-20.png)  [Gmail](alamf6023@gmail.com)
 ### ![instagram](./documentation/Project%20Assets/icons8-instagram-20.png)  [Instagram](https://www.instagram.com/faizan_alam_._/)
