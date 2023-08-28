@@ -1,26 +1,20 @@
 
-C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File>cd frontend
+cd frontend
 
-C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File\frontend>npm install -g firebase-tools
-npm WARN deprecated har-validator@5.1.5: this library is no longer supported
-npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
-npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
-^CTerminate batch job (Y/N)? ^C
+npm install -g firebase-tools
 
-C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File\frontend>npm install -g firebase-tools
-npm WARN deprecated har-validator@5.1.5: this library is no longer supported
-npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
-npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+    npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+    npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+    npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+    changed 667 packages in 3m
 
-changed 667 packages in 3m
+    62 packages are looking for funding
+      run `npm fund` for details
 
-62 packages are looking for funding
-  run `npm fund` for details
+firebase login
+    Already logged in as maxchannel.mailme@gmail.com
 
-C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File\frontend>firebase login
-Already logged in as maxchannel.mailme@gmail.com
-
-C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File\frontend>firebase init hosting
+firebase init hosting
 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -28,53 +22,53 @@ C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File\frontend>fir
      ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
      ##       #### ##     ## ######## ########  ##     ##  ######  ########
 
-You're about to initialize a Firebase project in this directory:
+    You're about to initialize a Firebase project in this directory:
 
-  C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File\frontend
+    C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File\frontend
 
-? Are you ready to proceed? Yes
+    ? Are you ready to proceed? Yes
 
-=== Project Setup
+    === Project Setup
 
-First, let's associate this project directory with a Firebase project.
-You can create multiple project aliases by running firebase use --add,
-but for now we'll just set up a default project.
+    First, let's associate this project directory with a Firebase project.
+    You can create multiple project aliases by running firebase use --add,
+    but for now we'll just set up a default project.
 
-? Please select an option: Use an existing project
-? Select a default Firebase project for this directory: codofile-85b0c (codofile)
-i  Using project codofile-85b0c (codofile)
+    ? Please select an option: Use an existing project
+    ? Select a default Firebase project for this directory: codofile-85b0c (codofile)
+    i  Using project codofile-85b0c (codofile)
 
-=== Hosting Setup
+    === Hosting Setup
 
-Your public directory is the folder (relative to your project directory) that
-will contain Hosting assets to be uploaded with firebase deploy. If you
-have a build process for your assets, use your build's output directory.
+    Your public directory is the folder (relative to your project directory) that
+    will contain Hosting assets to be uploaded with firebase deploy. If you
+    have a build process for your assets, use your build's output directory.
 
-? What do you want to use as your public directory? build
-? Configure as a single-page app (rewrite all urls to /index.html)? Yes
-? Set up automatic builds and deploys with GitHub? No
-? File build/index.html already exists. Overwrite? No
-i  Skipping write of build/index.html
+    ? What do you want to use as your public directory? build
+    ? Configure as a single-page app (rewrite all urls to /index.html)? Yes
+    ? Set up automatic builds and deploys with GitHub? No
+    ? File build/index.html already exists. Overwrite? No
+    i  Skipping write of build/index.html
 
-i  Writing configuration info to firebase.json...
-i  Writing project information to .firebaserc...
+    i  Writing configuration info to firebase.json...
+    i  Writing project information to .firebaserc...
 
-+  Firebase initialization complete!
+    +  Firebase initialization complete!
 
-+  hosting[codofile-85b0c]: file upload complete
-i  hosting[codofile-85b0c]: finalizing version...
-+  hosting[codofile-85b0c]: version finalized
-i  hosting[codofile-85b0c]: releasing new version...
-+  hosting[codofile-85b0c]: release complete
-i  hosting[codofile-85b0c]: beginning deploy...
-+  Deploy complete!-85b0c]: found 21 files in build
+    +  hosting[codofile-85b0c]: file upload complete
+    i  hosting[codofile-85b0c]: finalizing version...
+    +  hosting[codofile-85b0c]: version finalized
+    i  hosting[codofile-85b0c]: releasing new version...
+    +  hosting[codofile-85b0c]: release complete
+    i  hosting[codofile-85b0c]: beginning deploy...
+    +  Deploy complete!-85b0c]: found 21 files in build
 
-Project Console: https://console.firebase.google.com/project/codofile-85b0c/overview
-Hosting URL: https://codofile-85b0c.web.app
+    Project Console: https://console.firebase.google.com/project/codofile-85b0c/overview
+    Hosting URL: https://codofile-85b0c.web.app
 
-C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File\frontend>cd ../backend
+cd ../backend
 
-C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File\backend>firebase init functions
+firebase init functions
 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -82,72 +76,73 @@ C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File\backend>fire
      ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
      ##       #### ##     ## ######## ########  ##     ##  ######  ########
 
-You're about to initialize a Firebase project in this directory:
+    You're about to initialize a Firebase project in this directory:
 
-  C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File\backend
+      C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File\backend
 
-? Are you ready to proceed? Yes
+    ? Are you ready to proceed? Yes
 
-=== Project Setup
+    === Project Setup
 
-First, let's associate this project directory with a Firebase project.
-You can create multiple project aliases by running firebase use --add,
-but for now we'll just set up a default project.
+    First, let's associate this project directory with a Firebase project.
+    You can create multiple project aliases by running firebase use --add,
+    but for now we'll just set up a default project.
 
-? Please select an option: Use an existing project
-? Select a default Firebase project for this directory: codofile-85b0c (codofile)
-i  Using project codofile-85b0c (codofile)
+    ? Please select an option: Use an existing project
+    ? Select a default Firebase project for this directory: codofile-85b0c (codofile)
+    i  Using project codofile-85b0c (codofile)
 
-=== Functions Setup
-Let's create a new codebase for your functions.
-A directory corresponding to the codebase will be created in your project
-with sample code pre-configured.
+    === Functions Setup
+    Let's create a new codebase for your functions.
+    A directory corresponding to the codebase will be created in your project
+    with sample code pre-configured.
 
-See https://firebase.google.com/docs/functions/organize-functions for
-more information on organizing your functions using codebases.
+    See https://firebase.google.com/docs/functions/organize-functions for
+    more information on organizing your functions using codebases.
 
-Functions can be deployed with firebase deploy.
+    Functions can be deployed with firebase deploy.
 
-? What language would you like to use to write Cloud Functions? JavaScript
-? Do you want to use ESLint to catch probable bugs and enforce style? No
-+  Wrote functions/package.json
-+  Wrote functions/index.js
-+  Wrote functions/.gitignore
-? Do you want to install dependencies with npm now? Yes
-npm WARN EBADENGINE Unsupported engine {
-npm WARN EBADENGINE   package: undefined,
-npm WARN EBADENGINE   required: { node: '18' },
-npm WARN EBADENGINE   current: { node: 'v16.14.0', npm: '9.7.2' }
-npm WARN EBADENGINE }
+    ? What language would you like to use to write Cloud Functions? JavaScript
+    ? Do you want to use ESLint to catch probable bugs and enforce style? No
+    +  Wrote functions/package.json
+    +  Wrote functions/index.js
+    +  Wrote functions/.gitignore
+    ? Do you want to install dependencies with npm now? Yes
+    npm WARN EBADENGINE Unsupported engine {
+    npm WARN EBADENGINE   package: undefined,
+    npm WARN EBADENGINE   required: { node: '18' },
+    npm WARN EBADENGINE   current: { node: 'v16.14.0', npm: '9.7.2' }
+    npm WARN EBADENGINE }
 
-added 278 packages, and audited 279 packages in 52s
+    added 278 packages, and audited 279 packages in 52s
 
-25 packages are looking for funding
-  run `npm fund` for details
+    25 packages are looking for funding
+      run `npm fund` for details
 
-found 0 vulnerabilities
+    found 0 vulnerabilities
 
-i  Writing configuration info to firebase.json...
-i  Writing project information to .firebaserc...
+    i  Writing configuration info to firebase.json...
+    i  Writing project information to .firebaserc...
 
-+  Firebase initialization complete!
+    +  Firebase initialization complete!
 
-C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File\backend>firebase deploy --only functions
+firebase deploy --only functions
 
-=== Deploying to 'codofile-85b0c'...
+    === Deploying to 'codofile-85b0c'...
 
-i  deploying functions
-i  functions: preparing codebase default for deployment
-i  functions: ensuring required API cloudfunctions.googleapis.com is enabled...
-i  functions: ensuring required API cloudbuild.googleapis.com is enabled...
-i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled...
-!  functions: missing required API cloudbuild.googleapis.com. Enabling now...
-+  functions: required API cloudfunctions.googleapis.com is enabled
-!  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now...
+    i  deploying functions
+    i  functions: preparing codebase default for deployment
+    i  functions: ensuring required API cloudfunctions.googleapis.com is enabled...
+    i  functions: ensuring required API cloudbuild.googleapis.com is enabled...
+    i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled...
+    !  functions: missing required API cloudbuild.googleapis.com. Enabling now...
+    +  functions: required API cloudfunctions.googleapis.com is enabled
+    !  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now...
 
-Error: Your project codofile-85b0c must be on the Blaze (pay-as-you-go) plan to complete this command. Required API artifactregistry.googleapis.com can't be enabled until the upgrade is complete. To upgrade, visit the following URL:
+    Error: Your project codofile-85b0c must be on the Blaze (pay-as-you-go) plan to complete this command. Required API artifactregistry.googleapis.com can't be enabled until the upgrade is complete. To upgrade, visit the following URL:
 
-https://console.firebase.google.com/project/codofile-85b0c/usage/details
+    https://console.firebase.google.com/project/codofile-85b0c/usage/details
+
 
 C:\Users\faizan alam\OneDrive\Documents\CodoFile-Firebase\Codo-File\backend>
 
