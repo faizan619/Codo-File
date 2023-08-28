@@ -5,7 +5,14 @@ Design:
 - https://www.figma.com/file/ReVUl74oeC2VURCsuqEU31/Project?type=design&node-id=0-1&mode=design&t=1YO4YEJkqG3ne4E4-0
 - https://www.figma.com/proto/ReVUl74oeC2VURCsuqEU31/Project?type=design&node-id=23-2&t=1YO4YEJkqG3ne4E4-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=23%3A2&show-proto-sidebar=1
 - https://1drv.ms/w/s!An6UaBERXeivg7UHi_BsZ8BbOy-DQw?e=nhuWod
+- https://agentestudio.com/blog/website-footer-design
+- https://colorhunt.co/palettes/popular
+- https://www.shapedivider.app/
+- https://www.freepik.com/
+- https://www.toools.design/
+- https://flatuicolors.com/palette/cn
 - https://www.behance.net/
+- https://app.haikei.app/
 - https://dribbble.com/
 - https://storyset.com/
 - https://icons8.com/
@@ -15,6 +22,31 @@ Design:
 
 Frontend:
 - https://blobanimation.com/
+- https://ionic.io/ionicons/v4/usage
+- https://greensock.com/get-started/
+- https://greensock.com/docs/
+- https://cdnjs.com/libraries/gsap
+- https://www.youtube.com/playlist?list=PLB97yPrFwo5i8_GkJJ-K41vmNd0XT1uIU
+- https://momentjs.com/
+- https://github.com/soumyajit4419/Editor.io
+- https://github.com/codemirror/codemirror5
+- https://code-web-anywhere-6cw16ovmd-ashish454570.vercel.app/
+- https://formik.org/
+- https://www.websiteplanet.com/webtools/
+- https://stackoverflow.com/questions/57024486/react-get-codemirror-value-onclick
+- https://stackoverflow.com/questions/72659453/how-to-get-a-value-from-code-mirror-in-react-js
+- https://readme.so/editor
+- https://babeljs.io/repl#?
+- https://github.com/bensonruan/Tesseract-OCR
+- https://react-icons.github.io/react-icons/icons?name=vsc
+- https://www.w3schools.com/react/react_hooks.asp
+- https://greensock.com/docs/v3/Plugins/Draggable
+- https://www.npmjs.com/package/@codemirror/lang-python#user-content-pythonlanguage
+- https://poe.com/Codo_File
+- https://github.com/zapolnoch/node-tesseract-ocr
+- https://hackernoon.com/mastering-javascript-shorthand-tips-for-beginners?source=rss
+- https://www.youtube.com/watch?v=9WYMPEO51Jc
+- https://lottiefiles.com/web-player
 - https://reactrouter.com/en/main
 - https://stackoverflow.com/questions/70819371/referenceerror-regeneratorruntime-is-not-defined-when-running-testing
 - https://www.npmjs.com/package/react-use-clipboard
@@ -35,6 +67,16 @@ Backend:
 - https://github.com/bradtraversy/nodeauthapp/issues/7
 - https://stackoverflow.com/questions/34982964/bcrypt-error-illegal-arguments-string-unidentified
 - https://www.datainfinities.com/43/cant-set-headers-after-they-are-sent-to-the-client
+- https://expressjs.com/
+- https://nodejs.org/en/docs
+- https://stackoverflow.com/questions/23450534/how-to-call-a-python-function-from-node-js
+- https://medium.com/swlh/run-python-script-from-node-js-and-send-data-to-browser-15677fcf199f
+- https://github.com/extrabacon/python-shell
+- https://www.sohamkamani.com/nodejs/python-communication/
+- https://www.npmjs.com/package/concurrently
+- https://www.ivarprudnikov.com/nodejs-server-running-python-scripts/
+- https://nodejs.org/api/child_process.html
+- https://dashboard.render.com/
 - https://stackoverflow.com/questions/47783413/bcrypt-illegal-argument-number
 - https://bobbyhadz.com/blog/javascript-error-cannot-set-headers-after-they-are-sent-to-client
 - https://www.golinuxcloud.com/cannot-set-headers-after-they-are-sent-to-client/
@@ -44,8 +86,17 @@ Backend:
 Database:
 - https://cloud.mongodb.com/v2/64c1040943b2b305a0e61348#/clusters
 - https://1drv.ms/w/s!An6UaBERXeivg7UHi_BsZ8BbOy-DQw?e=oHyc8T
+- https://console.firebase.google.com/u/0/project/reactformwebsite-79b28/database/reactformwebsite-79b28-default-rtdb/data
+- https://firebase.google.com/docs/cli
 
 Testing:
+- https://www.check-plagiarism.com/
+- https://www.copyscape.com/
 
 Deployment:
 - https://www.github.com/faizan619
+- https://codofile-backend.onrender.com
+- https://codofile-85b0c.web.app
+- https://toffeeshare.com/
+- https://blogs.devchallenges.io/posts/tJ26U8MhZTPgBSRSwpqr
+- https://aws.amazon.com/free/
