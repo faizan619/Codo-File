@@ -14,7 +14,7 @@ function CodingPage(props) {
                     <div className="infoCoding infoDetails">
                     {props.info}
                     </div>
-                    <NavLink to={props.path}><button className="btn">Get Started</button></NavLink>
+                    <NavLink to={props.path}><button className="btn">{props.con}</button></NavLink>
                 </div>
                 <div className="codingimage codingsec">
                     <img
